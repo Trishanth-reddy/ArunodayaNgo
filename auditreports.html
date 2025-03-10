@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="auditreports.css">
     <script src="auditreports.js" defer></script>
     <script src="https://kit.fontawesome.com/076947b954.js" crossorigin="anonymous"></script>
+      <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/076947b954.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
     <header>
@@ -25,24 +32,45 @@
                 </div>
             </div>
         </div>
-        <nav class="main-nav">
-            <div class="container">
-                <div class="logo-section">
-                    <img src="https://placehold.co/50x50" alt="Arunodaya Trust Logo" class="logo">
-                    <h1>Arunodaya Trust</h1>
-                </div>
-                <div class="nav-links">
-                    <a href="#" class="active">Home</a>
-                    <a href="#">About Us</a>
-                    <a href="#">Our Core Team</a>
-                    <a href="#">Media Coverage</a>
-                    <button class="btn get-involved">GET INVOLVED</button>
-                    <button class="btn donate">DONATE</button>
-                    <a href="#" class="login">Login</a>
-                </div>
-                <button class="mobile-menu-btn" aria-label="Toggle menu">☰</button>
-            </div>
-        </nav>
+        <!-- Navigation -->
+ <nav class="navbar navbar-expand-lg bg-white">
+    <div class="container">
+        <div class="logo-section">
+            <img src="https://placehold.co/50x50" alt="Arunodaya Trust Logo" class="logo">
+            <h1 class="fs-4 mb-0">Arunodaya Trust</h1>
+        </div>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Our Core Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Media Coverage</a>
+                </li>
+                <li class="nav-item ms-lg-2">
+                    <a href="#" class="btn btn-primary-custom">GET INVOLVED</a>
+                </li>
+                <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                    <a href="#" class="btn btn-secondary-custom">DONATE</a>
+                </li>
+                <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                    <a href="#" class="login"><i class="fa-solid fa-user"></i> Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
     </header>
 
     <main>
@@ -66,7 +94,89 @@
         </section>
         
     </main>
+     <!-- Newsletter Section -->
+     <div class="nl-container">
+        <div class="nl-overlay"></div>
+        <div class="nl-content">
+            <div class="nl-text">
+                <h2>Subscribe <br> Newsletter</h2>
+                <p>Sign up for our yearly newsletter to get the latest news, volunteer opportunities.</p>
+            </div>
+            <div class="nl-form-container">
+                <form class="nl-form" id="newsletter-form">
+                    <div style="display:flex; align-items:end;">
+                        <div>
+                            <input type="text" id="name" class="nl-input" placeholder="Your Name" required>
+                            <input type="email" id="email" class="nl-input" placeholder="Enter Your Email Address" required>
+                        </div>
+                        <div style="margin-bottom:8px;margin-left:5px">
+                            <button type="submit" class="nl-button">SEND</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
-    <script src="main.js"></script>
+    <!-- Contact Section -->
+    <div class="contact-container container my-4">
+        <div class="row">
+            <!-- Left Column (Contact Info & Address) -->
+            <div class="col-md-7" style="text-align:left">
+                <div style="margin-bottom:30px">
+                    <h2>Get in touch</h2>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:venkat@arunoday.org">venkat@arunoday.org</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:arunodayatrust2008@gmail.com">arunodayatrust2008@gmail.com</a></p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:04027981250">040-27981250</a>, <a href="tel:27981251">27981251</a></p>
+                    <p><i class="fas fa-mobile-alt"></i> <a href="tel:+919032188999">+91 90321 88999</a>, <a href="tel:+918096950551">80969 50551</a></p>
+                </div>
+
+                <div style="margin-bottom:30px">
+                    <h3><i class="fas fa-map-marker-alt"></i> TELANGANA ADDRESS</h3>
+                    <p>1-4/7, Road No - 2, Ex Service Men Colony, Balaji Nagar, Jawahar Nagar Municipal Corporation, Kapra Mandal, Medchal District, Secunderabad - 500087.</p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:arunodayatrust2008@gmail.com">arunodayatrust2008@gmail.com</a>, <a href="mailto:venkat@arunoday.org">venkat@arunoday.org</a></p>
+                    <p><i class="fas fa-phone"></i> 040-27981250, 27981251</p>
+                    <div id="map-telangana" class="contact-map"></div>
+                </div>
+
+                <div style="margin-bottom:30px">
+                    <h3><i class="fas fa-map-marker-alt"></i> ANDHRA PRADESH ADDRESS</h3>
+                    <p>#5-98-50/1, 3rd Floor, Hotel Viceroy Complex, Main Road Brodipet, Guntur - 522002.</p>
+                    <p><i class="fas fa-phone"></i> 0863 2236999</p>
+                    <p><i class="fas fa-mobile-alt"></i> <a href="tel:+918096950550">+91 80969 50550</a></p>
+                    <div id="map-andhra" class="contact-map"></div>
+                </div>
+            </div>
+
+            <!-- Right Column (QR Code) -->
+            <div class="col-md-5 d-flex flex-column align-items-center">
+                <div class="contact-qr-placeholder">QR Code Here</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="auditreports.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Leaflet.js Library -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        function initMap() {
+            // Telangana Map
+            var telanganaMap = L.map('map-telangana').setView([17.385, 78.4867], 10);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap contributors'
+            }).addTo(telanganaMap);
+            L.marker([17.385, 78.4867]).addTo(telanganaMap).bindPopup('Telangana Location');
+
+            // Andhra Pradesh Map
+            var andhraMap = L.map('map-andhra').setView([16.3067, 80.4365], 10);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap contributors'
+            }).addTo(andhraMap);
+            L.marker([16.3067, 80.4365]).addTo(andhraMap).bindPopup('Andhra Pradesh Location');
+        }
+
+        document.addEventListener("DOMContentLoaded", initMap);
+    </script>
 </body>
 </html>

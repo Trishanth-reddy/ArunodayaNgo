@@ -1,0 +1,261 @@
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        /* Newsletter Section Styles */
+        .nl-container {
+            position: relative;
+            width: 90%;
+            max-width: 1100px;
+            height: 300px;
+            background: url('image.png') center/cover no-repeat;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            margin: 20px auto;
+        }
+
+        .nl-overlay {
+            background-image: url("https://s3-alpha-sig.figma.com/img/e1b6/34db/8c1768e04fd269ba9b2dd82186be723c?Expires=1742774400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=sIhzQFeuybbfAdT978KVQNwkzrVCjr-72esTLNxwaeCeSk2f0llIL4oAp0EGUrzusSF0sG0-CcV6-sdj8M51eMyCLajOO0XvxiS1Qt4JECUhQzkPJKaUqddm3qVC-6CveZ2T7LLAPi7fNHTlfsqc~NoTm4gZ3ghiJNHdbeHU6H~~3FtTGOb6o0QJ71sUiEfN2LqMtoirY2tvtZ9HmM-YFxnBo-UWk8-iCvm5kSvQf5SyudFqdlQPrwfBaoE3L67ws5UT9jm46JBHdtiJi4xrJo6ILNech9SZEUBMu8iwetcASnLgjR7wd6FWQ~W8TWG5Moq39R-axrIsuj8bT0DPcA__");
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* background: rgba(0, 0, 0, 0.4); */
+        }
+
+        .nl-content {
+            position: relative;
+            color: white;
+            z-index: 2;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+        }
+
+        .nl-text {
+            max-width: 50%;
+        }
+
+        .nl-form-container {
+            max-width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .nl-form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .nl-input {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 20px;
+            outline: none;
+            margin-bottom: 10px;
+        }
+
+        .nl-input-group {
+            display: flex;
+            width: 100%;
+            gap: 10px;
+        }
+
+        .nl-input-group .nl-input {
+            flex: 1;
+        }
+
+        .nl-button {
+            padding: 12px;
+            border: none;
+            border-radius: 20px;
+            background-color: #1c1c1c;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            width: auto;
+            white-space: nowrap;
+        }
+
+        .nl-button:hover {
+            background-color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .nl-container {
+                flex-direction: column;
+                height: auto;
+                padding: 30px;
+            }
+
+            .nl-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nl-text {
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .nl-form-container {
+                max-width: 100%;
+                align-items: center;
+            }
+
+            .nl-form {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nl-input-group {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .nl-button {
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+
+        /* Contact Section Styles */
+        .contact-container {
+            margin: 20px auto;
+            max-width: 1100px;
+            padding: 20px;
+        }
+
+        .contact-map {
+            height: 250px;
+            width: 100%;
+        }
+
+        .contact-qr-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .contact-qr-placeholder {
+            width: 200px;
+            height: 200px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: #666;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Newsletter Section -->
+    <div class="nl-container">
+        <div class="nl-overlay"></div>
+        <div class="nl-content">
+            <div class="nl-text">
+                <h2>Subscribe <br> Newsletter</h2>
+                <p>Sign up for our yearly newsletter to get the latest news, volunteer opportunities.</p>
+            </div>
+            <div class="nl-form-container">
+                <form class="nl-form" id="newsletter-form">
+                    <div style="display:flex; align-items:end;">
+                        <div>
+                            <input type="text" id="name" class="nl-input" placeholder="Your Name" required>
+                            <input type="email" id="email" class="nl-input" placeholder="Enter Your Email Address" required>
+                        </div>
+                        <div style="margin-bottom:8px;margin-left:5px">
+                            <button type="submit" class="nl-button">SEND</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="contact-container container my-4">
+        <div class="row">
+            <!-- Left Column (Contact Info & Address) -->
+            <div class="col-md-7" style="text-align:left">
+                <div style="margin-bottom:30px">
+                    <h2>Get in touch</h2>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:venkat@arunoday.org">venkat@arunoday.org</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:arunodayatrust2008@gmail.com">arunodayatrust2008@gmail.com</a></p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:04027981250">040-27981250</a>, <a href="tel:27981251">27981251</a></p>
+                    <p><i class="fas fa-mobile-alt"></i> <a href="tel:+919032188999">+91 90321 88999</a>, <a href="tel:+918096950551">80969 50551</a></p>
+                </div>
+
+                <div style="margin-bottom:30px">
+                    <h3><i class="fas fa-map-marker-alt"></i> TELANGANA ADDRESS</h3>
+                    <p>1-4/7, Road No - 2, Ex Service Men Colony, Balaji Nagar, Jawahar Nagar Municipal Corporation, Kapra Mandal, Medchal District, Secunderabad - 500087.</p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:arunodayatrust2008@gmail.com">arunodayatrust2008@gmail.com</a>, <a href="mailto:venkat@arunoday.org">venkat@arunoday.org</a></p>
+                    <p><i class="fas fa-phone"></i> 040-27981250, 27981251</p>
+                    <div id="map-telangana" class="contact-map"></div>
+                </div>
+
+                <div style="margin-bottom:30px">
+                    <h3><i class="fas fa-map-marker-alt"></i> ANDHRA PRADESH ADDRESS</h3>
+                    <p>#5-98-50/1, 3rd Floor, Hotel Viceroy Complex, Main Road Brodipet, Guntur - 522002.</p>
+                    <p><i class="fas fa-phone"></i> 0863 2236999</p>
+                    <p><i class="fas fa-mobile-alt"></i> <a href="tel:+918096950550">+91 80969 50550</a></p>
+                    <div id="map-andhra" class="contact-map"></div>
+                </div>
+            </div>
+
+            <!-- Right Column (QR Code) -->
+            <div class="col-md-5 d-flex flex-column align-items-center">
+                <div class="contact-qr-placeholder">QR Code Here</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Leaflet.js Library -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        function initMap() {
+            // Telangana Map
+            var telanganaMap = L.map('map-telangana').setView([17.385, 78.4867], 10);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap contributors'
+            }).addTo(telanganaMap);
+            L.marker([17.385, 78.4867]).addTo(telanganaMap).bindPopup('Telangana Location');
+
+            // Andhra Pradesh Map
+            var andhraMap = L.map('map-andhra').setView([16.3067, 80.4365], 10);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap contributors'
+            }).addTo(andhraMap);
+            L.marker([16.3067, 80.4365]).addTo(andhraMap).bindPopup('Andhra Pradesh Location');
+        }
+
+        document.addEventListener("DOMContentLoaded", initMap);
+    </script>
+</body>
+</html>
