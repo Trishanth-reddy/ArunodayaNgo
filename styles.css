@@ -19,168 +19,218 @@ body {
 }
 
      /* Top Bar */
-     .at-top-bar {
-        background-color: var(--secondary-color);
-        color: white;
-        padding: 8px 50px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+.at-top-bar {
+    background-color: var(--secondary-color);
+    color: #064e46; /* Dark greenish-blue text */
+    padding: 8px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    .at-contact-info {
-        font-size: 14px;
-    }
+/* Contact Info Styling */
+.at-contact-info {
+    font-size: 16px; /* Slightly bigger for readability */
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Space between phone and email */
+}
 
-    .at-contact-info i {
-        margin-right: 5px;
-        color: #000;
-    }
+/* Phone & Email Icon Styling */
+.at-contact-info i {
+    margin-right: 8px;
+    color: #064e46; /* Dark greenish-blue to match text */
+    font-size: 18px; /* Bigger for visibility */
+}
 
-    .at-social-icons a {
-        color: #000;
-        margin-left: 15px;
-        font-size: 18px;
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
+/* Social Icons Styling */
+.at-social-icons a {
+    color: #064e46; /* Matching color */
+    margin-left: 15px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
 
-    .at-social-icons a:hover {
-        color: var(--primary-color);
-    }
+.at-social-icons a:hover {
+    color: var(--primary-color); /* Hover effect */
+}
+
 
     /* Navbar */
+    /* Navbar Styling */
+.at-nav {
+    padding: 15px 50px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo Styling */
+.at-logo img {
+    height: 60px;
+}
+
+/* Navigation Links */
+.at-nav-links {
+    display: flex;
+    align-items: center;
+}
+
+/* Add vertical lines after Home, About Us, and Our Core Team */
+.at-nav-links .nav-item {
+    position: relative;
+    padding: 0 15px; /* Adjust spacing */
+}
+
+.at-nav-links .nav-item:nth-child(1)::after,  /* After Home */
+.at-nav-links .nav-item:nth-child(2)::after,  /* After About Us */
+.at-nav-links .nav-item:nth-child(3)::after  /* After Our Core Team */ {
+    content: "";
+    position: absolute;
+    right: -8px; /* Adjust position */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px; /* Line width */
+    height: 60%; /* Match text height */
+    background-color: rgba(0, 0, 0, 0.3); /* Line color */
+}
+
+/* No line after Media Coverage, Get Involved, Donate, or Login */
+.at-nav-links .nav-item:nth-child(4)::after {
+    display: none; 
+}
+
+/* Nav Link Styling */
+.at-nav-links .nav-link {
+    color: var(--text-color);
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.at-nav-links .nav-link:hover {
+    color: var(--primary-color);
+}
+
+.at-nav-links .nav-link.active {
+    color: var(--primary-color);
+}
+
+/* Buttons */
+.at-nav-links button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    margin-left: 10px;
+}
+
+.at-nav-links button:hover {
+    transform: translateY(-2px);
+}
+
+.at-get-involved {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.at-donate {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+/* Login Icon */
+/* Login Icon */
+.at-login {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    margin-left: 15px;
+    gap: 8px; /* Add gap between icon and text */
+}
+
+.at-login i {
+    font-size: 18px; /* Adjust icon size if needed */
+}
+
+.at-login:hover {
+    color: var(--primary-color);
+}
+
+/* Adjust alignment of the login item in the navbar */
+.at-nav-links .nav-item:last-child {
+    display: flex;
+    align-items: center;
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
     .at-nav {
-        padding: 15px 50px;
-        background: white;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        padding: 10px 20px;
     }
 
-    .at-logo img {
-        height: 60px;
+    .navbar-toggler {
+        border: none;
+        background: none;
+    }
+
+    .navbar-toggler:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+    .navbar-collapse {
+        text-align: center;
+        background: white;
+        padding: 10px;
+        border-radius: 10px;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 80px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+    }
+
+    .at-nav-links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .at-nav-links .nav-item {
+        padding: 10px 0;
+    }
+
+    .at-nav-links .nav-item:nth-child(1)::after,
+    .at-nav-links .nav-item:nth-child(2)::after,
+    .at-nav-links .nav-item:nth-child(3)::after {
+        display: none; /* Remove vertical lines in mobile view */
     }
 
     .at-nav-links .nav-link {
-        color: var(--text-color);
-        font-weight: 500;
-        margin: 0 15px;
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
-
-    .at-nav-links .nav-link:hover {
-        color: var(--primary-color);
-    }
-
-    .at-nav-links .nav-link.active {
-        color: var(--primary-color);
+        font-size: 18px;
     }
 
     .at-nav-links button {
-        padding: 10px 20px;
-        border: none;
-        border-radius: 30px;
-        font-weight: bold;
-        transition: transform 0.3s ease;
-        margin-left: 10px;
-    }
-
-    .at-nav-links button:hover {
-        transform: translateY(-2px);
-    }
-
-    .at-get-involved {
-        background-color: var(--primary-color);
-        color: white;
-    }
-
-    .at-donate {
-        background-color: var(--accent-color);
-        color: white;
+        width: 100%;
+        margin: 10px 0;
+        font-size: 18px;
     }
 
     .at-login {
-        display: flex;
-        align-items: center;
-        font-size: 16px;
-        font-weight: 500;
-        cursor: pointer;
-        transition: color 0.3s ease;
-        margin-left: 15px;
+        justify-content: center;
+        margin-top: 10px;
     }
+}
 
-    .at-login:hover {
-        color: var(--primary-color);
-    }
-
-    /* Mobile View Adjustments */
-    @media (max-width: 768px) {
-        .at-top-bar {
-            padding: 8px 20px;
-            flex-direction: column;
-            text-align: center;
-        }
-
-        .at-contact-info {
-            margin-bottom: 10px;
-        }
-
-        .at-social-icons {
-            margin-top: 10px;
-        }
-
-        .at-nav {
-            padding: 10px 20px;
-        }
-
-        .navbar-toggler {
-            border: none;
-            background: none;
-        }
-
-        .navbar-toggler:focus {
-            outline: none;
-            box-shadow: none;
-        }
-
-        .navbar-collapse {
-            text-align: center;
-            background: white;
-            padding: 10px;
-            border-radius: 10px;
-            position: absolute;
-            width: 100%;
-            left: 0;
-            top: 80px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            z-index: 100;
-        }
-
-        .at-nav-links {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .at-nav-links .nav-link {
-            margin: 10px 0;
-            font-size: 18px;
-        }
-
-        .at-nav-links button {
-            width: 100%;
-            margin: 10px 0;
-            font-size: 18px;
-        }
-
-        .at-login {
-            justify-content: center;
-            margin-top: 10px;
-        }
-    }
-
+    
 /* Hero Section */
 .at-hero {
     width: 100%;
@@ -407,16 +457,10 @@ body {
 
         .about-section h2 {
             font-size: 2.5em;
-            font-weight: bold;
+            /* font-weight: bold; */
         }
 
-        .highlight {
-            color: var(--secondary-color);
-        }
 
-        .red {
-            color: var(--primary-color);
-        }
 
         .about-text {
             font-size: 1.1em;
@@ -817,50 +861,52 @@ body {
             }
         }
 
-        /* CSR Partners section */
         .csr-partners {
             padding: 50px 20px;
             text-align: center;
         }
-
+        
         .partners-title {
             color: #FFA500;
             margin-bottom: 40px;
         }
-
+        
         .carousel-wrapper {
             overflow: hidden;
             width: 100%;
             max-width: 1000px;
             margin: 0 auto;
+            position: relative;
         }
-
+        
         .partners-container {
             display: flex;
-            width: max-content; /* Ensure the container is wide enough to hold all logos */
-            animation: scroll 20s linear infinite; /* Adjust the duration as needed */
+            width: max-content;
+            animation: scroll 10s linear infinite; /* Faster infinite scroll */
         }
-
+        
         .partner-logo {
-            width: 100px;
-            height: 50px;
+            width: 150px;  /* Increased size */
+            height: 80px;  /* Increased size */
             background-color: #f5f5f5;
             display: flex;
             align-items: center;
             justify-content: center;
             border: 1px solid #ddd;
-            margin-right: 10px; /* Add spacing between logos */
-            flex-shrink: 0; /* Prevent logos from shrinking */
+            margin-right: 20px; /* Increased spacing */
+            flex-shrink: 0;
         }
-
+        
+        /* Infinite scrolling animation */
         @keyframes scroll {
             0% {
                 transform: translateX(0);
             }
             100% {
-                transform: translateX(-50%); /* Move the container by half its width */
+                transform: translateX(-50%);
             }
         }
+        
 
         /* Milestones section */
         .milestones {
