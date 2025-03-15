@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arunodaya Trust</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="coreteam.css">
+    <script src="coreteam.js"></script>
+</head>
+<body>
+   <!-- Top Bar -->
+   <div class="at-top-bar">
+    <div class="at-contact-info">
+        <span><i class="fas fa-phone"></i> 040-27981250,27981251</span>
+        <span><i class="fas fa-envelope"></i> arunodayatrust2008@gmail.com</span>
+    </div>
+    <div class="at-social-icons">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+    </div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg at-nav">
+    <div class="container-fluid">
+        <a class="navbar-brand at-logo" href="#">
+            <img src="placeholder-logo.png" alt="Arunodaya Trust">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span><i class="fas fa-bars fa-lg"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto at-nav-links">
+                <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="knowmore.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Our Core Team</a></li>
+                <li class="nav-item"><a class="nav-link" href="mediacoverage.html">Media Coverage</a></li>
+                <li class="nav-item"><button class="btn at-get-involved">GET INVOLVED</button></li>
+                <li class="nav-item"><button class="btn at-donate">DONATE</button></li>
+                <li class="nav-item">
+                    <div class="at-login">
+                        <i class="fas fa-sign-in-alt"></i>
+                        <span>Login</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+</header>
+
+    <section class="at-hero">
+        <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1600&q=80" alt="Happy Children">
+    </section>
+
+    <section class="at-projects">
+        <h2><span class="at-highlight">OUR</span> <span class="at-red">PROJECTS</span></h2>
+        <div class="at-project-cards">
+            <div class="at-card">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>EDUCATION</h3>
+                <a href="#" class="at-know-more">Know More</a>
+            </div>
+            <div class="at-card">
+                <i class="fas fa-heart-pulse"></i>
+                <h3>HEALTH</h3>
+                <a href="#" class="at-know-more">Know More</a>
+            </div>
+            <div class="at-card">
+                <i class="fas fa-hands-holding-child"></i>
+                <h3>SOCIAL CAUSES</h3>
+                <a href="#" class="at-know-more">Know More</a>
+            </div>
+            <div class="at-card">
+                <i class="fas fa-house-laptop"></i>
+                <h3>LIVELIHOODS</h3>
+                <a href="#" class="at-know-more">Know More</a>
+            </div>
+        </div>
+
+    <!-- About Us Section -->
+    <section class="about-section container">
+        <h2><span class="at-red">ABOUT</span> <span class="at-highlight">US</span></h2>
+
+        <div class="row align-items-center mt-4">
+            <!-- Mobile: Video First -->
+            <div class="col-md-6 order-md-2">
+                <div class="video-placeholder">YOUTUBE VIDEO</div>
+            </div>
+
+            <!-- Mobile: Text Below Video -->
+            <div class="col-md-6 order-md-1">
+                <p class="about-text">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five centuries, but also the leap into electronic typesetting.
+                </p>
+                <p class="about-text">
+                    Remaining when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                </p>
+                
+                    <button class="btn btn-custom btn-know-more ">KNOW MORE</button>
+                    <button class="btn btn-custom btn-goals">OUR GOALS</button>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Chairman's message -->
+    <section class="chairman">
+        <div class="chairman-img" style="background-color: grey;"></div>
+        <h2 class="section-title"><span class="at-highlight">CHAIRMAN'S</span> <span class="at-red">MESSAGE</span></h2>
+        <p class="chairman-text">Lorem Ipsum is simply dummy text of the printin typesetting, dummy text ever when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+        <button class="read-more-btn" onclick="window.location.href = 'chairmanmessage.html'">READ MORE</button>
+    </section>
+
+    <!-- Milestones section -->
+    <section class="milestones">
+        <h1>MILESTONES</h1>
+        <div class="timeline">
+            <div class="milestone left">
+                <h3>November 21, 2008</h3>
+                <p>Registered Under Trust Act 1882 Bearing No 20 of 2008 on 21.11.2008</p>
+            </div>
+            <div class="milestone right">
+                <h3>May 11, 2009</h3>
+                <p>Establishment of Arunodaya Orphan Home with 12 Children of HIV Infected & Affected Communities</p>
+            </div>
+            <div class="milestone left">
+                <h3>May 28, 2010</h3>
+                <p>Registered Under Income Tax 1961 Under Section 12A dated 28.05.2010 Initiated Mission Education & STeP supported by Smile Foundation, New Delhi</p>
+            </div>
+            <div class="milestone right">
+                <h3>August 4, 2011</h3>
+                <p>Registered under Income Trust Act 1961 Under Section 80G dated 04.08.2011. Inauguration of Ashirwad Feeding Program Supported by Hand of Hope, Hyderabad</p>
+            </div>
+            <div class="milestone left">
+                <h3>February 1, 2012</h3>
+                <p>Launching of Care & Support Program supporting 82 HIV Infected Families</p>
+            </div>
+            <div class="milestone right">
+                <h3>May 10, 2013</h3>
+                <p>Registered Under Foreign Contribution Regulation Act Dated 10.05.2013</p>
+            </div>
+            <div class="milestone left">
+                <h3>May 7, 2014</h3>
+                <p>Construction of Own Shelter Home providing Food, Clothing, Shelter, and Education to 40 Children and Training Centre</p>
+            </div>
+            <div class="milestone right">
+                <h3>November 1, 2015</h3>
+                <p>Selected as Best NGO in Shamirpet Mandal by the Newly Formed Telangana Government</p>
+            </div>
+            <div class="milestone left">
+                <h3>2016</h3>
+                <p>Pradhan Mantri Kaushal Vikas Yojana (PMKVY) Project</p>
+            </div>
+            <div class="milestone right">
+                <h3>June 1, 2016</h3>
+                <p>Establishment of New Skill Development Centre at Guntur, Andhra Pradesh</p>
+            </div>
+            <div class="milestone left">
+                <h3>2017</h3>
+                <p>SC Corporation Project, Govt of Andhra Pradesh</p>
+            </div>
+            <div class="milestone right">
+                <h3>2018</h3>
+                <p>Deen Dayal Upadhyaya Grameen Kaushalya Yojana (DDUGKY) Project</p>
+            </div>
+            <div class="milestone left">
+                <h3>2019</h3>
+                <p>Corporate Social Responsibility Project of Gland Pharma - Urban Ultra Poor Program</p>
+            </div>
+            <div class="milestone right">
+                <h3>2020</h3>
+                <p>Corporate Social Responsibility Project of Gland Pharma - COVID-19 Relief Distribution to 12,000 Families in 14 Mandals of Medchal</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact section -->
+    <section class="impact">
+        <h2 class="section-title"><span class="at-highlight">IMPACT</span> </h2>
+        <div class="container">
+            <div class="impact-stack-container">
+                <div class="impact-card" onclick="focusImpactCard(this)">
+                    <div class="impact-card-content">Innovation</div>
+                </div>
+                <div class="impact-card" onclick="focusImpactCard(this)">
+                    <div class="impact-card-content"></div>
+                </div>
+                <div class="impact-card" onclick="focusImpactCard(this)">
+                    <div class="impact-card-content">Purpose</div>
+                </div>
+                <div class="impact-card" onclick="focusImpactCard(this)">
+                    <div class="impact-card-content">Action</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Team section -->
+    <div id="app">
+        <div class="header">
+            <h1>OUR CORE TEAM</h1>
+        </div>
+        
+        <div class="team-container">
+            <div class="team-member" id="member1">
+                <img src="https://picsum.photos/250/250" alt="Team Member 1">
+                <h3>John Doe</h3>
+                <p>CEO</p>
+            </div>
+            <div class="team-member" id="member2">
+                <img src="https://picsum.photos/251/251" alt="Team Member 2">
+                <h3>Jane Smith</h3>
+                <p>CTO</p>
+            </div>
+            <div class="team-member" id="member3">
+                <img src="https://picsum.photos/252/252" alt="Team Member 3">
+                <h3>Mike Johnson</h3>
+                <p>Lead Designer</p>
+            </div>
+           
+            <!-- <button class="read-more-btn2">Know More</button> -->
+            
+        </div>
+        <div class="text-section">
+            <p>Our team of dedicated professionals brings together decades of experience in technology and innovation. Each member contributes unique skills and perspectives, driving our company's success forward.</p>
+        </div>
+        <button class="read-more-btn" >Know More</button>
+    </div>
+
+
+    <!-- Gallery section -->
+    <div id="app">
+        <h2><span style="color: #d4a017;">OUR</span> <span class="at-red">GALLERY</span></h2>
+  
+        <div class="gallery-container">
+          <div class="gallery">
+            <img src="https://source.unsplash.com/random/271x235?nature" alt="Nature" class="item1" loading="lazy">
+            <img src="https://source.unsplash.com/random/154x144?architecture" alt="Architecture" class="item2" loading="lazy">
+            <img src="https://source.unsplash.com/random/154x144?travel" alt="Travel" class="item3" loading="lazy">
+            <img src="https://source.unsplash.com/random/271x147?food" alt="Food" class="item4" loading="lazy">
+            <img src="https://source.unsplash.com/random/334x235?technology" alt="Technology" class="item5" loading="lazy">
+            <img src="https://source.unsplash.com/random/154x144?sports" alt="Sports" class="item6" loading="lazy">
+            <img src="https://source.unsplash.com/random/154x144?art" alt="Art" class="item7" loading="lazy">
+            <img src="https://source.unsplash.com/random/271x144?animals" alt="Animals" class="item8" loading="lazy">
+          </div>
+        </div>
+  
+        <button class="read-more-btn" onclick="window.location.href = 'gallery.html'">SEE MORE</button>
+      </div>
+    
+    <!-- CSR Partners section -->
+    <section class="csr-partners">
+        <h2 class="partners-title">CSR <span class="at-red">PARTNERS</span></h2>
+        <div class="carousel-wrapper">
+            <div class="partners-container" id="carousel">
+                <div class="partner-logo">Logo 1</div>
+                <div class="partner-logo">Logo 2</div>
+                <div class="partner-logo">Logo 3</div>
+                <div class="partner-logo">Logo 4</div>
+                <div class="partner-logo">Logo 5</div>
+                <div class="partner-logo">Logo 6</div>
+            </div>
+        </div>
+    </section>
+<!-- Newsletter Section -->
+<div class="nl-container">
+    <div class="nl-overlay"></div>
+    <div class="nl-content">
+        <div class="nl-text">
+            <h2>Subscribe <br> Newsletter</h2>
+            <p>Sign up for our yearly newsletter to get the latest news, volunteer opportunities.</p>
+        </div>
+        <div class="nl-form-container">
+            <form class="nl-form" id="newsletter-form">
+                <div style="display:flex; align-items:end;">
+                    <div>
+                        <input type="text" id="name" class="nl-input" placeholder="Your Name" required>
+                        <input type="email" id="email" class="nl-input" placeholder="Enter Your Email Address" required>
+                    </div>
+                    <div style="margin-bottom:8px;margin-left:5px">
+                        <button type="submit" class="nl-button">SEND</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Contact Section -->
+<div class="contact-container container my-4">
+    <div class="row">
+        <!-- Left Column (Contact Info & Address) -->
+        <div class="col-md-7" style="text-align: left;">
+            <div style="margin-bottom:30px">
+                <h2>Get in touch</h2>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:venkat@arunoday.org">venkat@arunoday.org</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:arunodayatrust2008@gmail.com">arunodayatrust2008@gmail.com</a></p>
+                <p><i class="fas fa-phone"></i> <a href="tel:04027981250">040-27981250</a>, <a href="tel:27981251">27981251</a></p>
+                <p><i class="fas fa-mobile-alt"></i> <a href="tel:+919032188999">+91 90321 88999</a>, <a href="tel:+918096950551">80969 50551</a></p>
+            </div>
+
+            <div style="margin-bottom:30px">
+                <h3><i class="fas fa-map-marker-alt"></i> TELANGANA ADDRESS</h3>
+                <p>1-4/7, Road No - 2, Ex Service Men Colony, Balaji Nagar, Jawahar Nagar Municipal Corporation, Kapra Mandal, Medchal District, Secunderabad - 500087.</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:arunodayatrust2008@gmail.com">arunodayatrust2008@gmail.com</a>, <a href="mailto:venkat@arunoday.org">venkat@arunoday.org</a></p>
+                <p><i class="fas fa-phone"></i> 040-27981250, 27981251</p>
+                <div id="map-telangana" class="contact-map"></div>
+            </div>
+
+            <div style="margin-bottom:30px">
+                <h3><i class="fas fa-map-marker-alt"></i> ANDHRA PRADESH ADDRESS</h3>
+                <p>#5-98-50/1, 3rd Floor, Hotel Viceroy Complex, Main Road Brodipet, Guntur - 522002.</p>
+                <p><i class="fas fa-phone"></i> 0863 2236999</p>
+                <p><i class="fas fa-mobile-alt"></i> <a href="tel:+918096950550">+91 80969 50550</a></p>
+                <div id="map-andhra" class="contact-map"></div>
+            </div>
+        </div>
+
+        <!-- Right Column (QR Code) -->
+        <div class="col-md-5 d-flex flex-column align-items-center">
+            <div class="contact-qr-placeholder">QR Code Here</div>
+        </div>
+    </div>
+</div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="script.js" type="module"></script>
+    <script>
+         
+    </script>
+</body>
+</html>
