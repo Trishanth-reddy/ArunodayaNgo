@@ -239,6 +239,55 @@
             margin-top: 20px;
         }
         
+        /* Main content styles */
+        .section-title {
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .content-section {
+            padding: 40px 0;
+        }
+        
+        .placeholder-image {
+            background-color: #f0f0f0;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-weight: bold;
+        }
+        
+        /* Footer buttons */
+        .report-btn {
+            background-color: #FF6F61;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 25px;
+            margin-right: 10px;
+            margin-top: 20px;
+        }
+        
+        .audit-btn {
+            background-color: white;
+            color: #333;
+            border: 1px solid #FF6F61;
+            padding: 8px 20px;
+            border-radius: 25px;
+            margin-top: 20px;
+        }
+        
+        .accountability-list {
+            padding-left: 20px;
+        }
+        
+        .accountability-list li {
+            margin-bottom: 10px;
+        }
+        
         section {
             padding: 40px 0;
         }
@@ -254,6 +303,7 @@
             line-height: 1.6;
             color: #333;
         }
+
         /* Newsletter Section Styles */
         .nl-container {
             position: relative;
@@ -431,7 +481,7 @@
     </style>
 </head>
 <body>
-    <!-- Contact Bar -->
+       <!-- Contact Bar -->
  <div class="contact-bar">
     <div class="container">
         <div class="row">
@@ -440,10 +490,10 @@
                 <a href="mailto:arunodayatrust2008@gmail.com"><i class="fa-solid fa-envelope"></i> arunodayatrust2008@gmail.com</a>
             </div>
             <div class="col-md-6 social-links text-md-end text-center">
-                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/arunodayatrust/#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://x.com/arunodayatrust2" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.facebook.com/arunodaya.trust" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.youtube.com/@arunodayatrust8433" aria-label="LinkedIn"><i class="fa-brands fa-youtube"></i></a>
             </div>
         </div>
     </div>
@@ -488,67 +538,98 @@
     </div>
 </nav>   
         
-        <!-- Mobile content (full-width layout as shown in the image) -->
-        <div class="mobile-content">
-            <!-- Logo placeholder -->
-            <div class="mobile-logo">
-                <span>IMAGE</span>
-            </div>
-            
-            <!-- History section -->
-            <div class="mobile-section">
-                <h2 class="section-heading-mobile">HISTORY</h2>
-                <p>Lorem ipsum is simply dummy text of the printing typesetting industry's standard blind text. When an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</p>
-                <p>Lorem ipsum is simply dummy text of the printing typesetting industry's standard blind text. When an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</p>
-            </div>
-            
-            <!-- Image placeholder -->
-            <div class="mobile-img">
-                <span>IMAGE</span>
-            </div>
-            
-            <!-- Organizational beliefs section -->
-            <div class="mobile-section">
-                <h2 class="section-heading-mobile">ORGANIZATIONAL BELIEFS</h2>
-                <p>Lorem ipsum is simply dummy text of the printing typesetting industry's standard blind text. When an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</p>
-                <p>Lorem ipsum is simply dummy text of the printing typesetting industry's standard blind text. When an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</p>
-            </div>
-            
-            <!-- Image placeholder -->
-            <div class="mobile-img">
-                <span>IMAGE</span>
-            </div>
-            
-            <!-- Accountability section -->
-            <div class="mobile-section d-flex flex-row justify-content-between">
-                <div>  
-                    <h2 class="section-heading-mobile">ACCOUNTABILITY</h2>
-                    <p>Arundaya Trust commitment to accountability is based on the pillars:</p>
-                    <ul>
-                        <li>Transparency in financial transactions</li>
-                        <li>The organization's Christian commitments</li>
-                        <li>Regular updates on ongoing initiatives</li>
-                        <li>A commitment to serving Children and communities</li>
-                        <li>A determination to help those industry standards</li>
-                        <li>Focus on education and learning</li>
-                        <li>And Transparency</li>
-                    </ul>
-                <div>
-                    <a href="#" class="mobile-report-btn">ANNUAL REPORT</a>
-                    <a href="#" class="mobile-audit-btn">AUDIT REPORT</a></div>
-                </div>  
-                <div class="mobile-img">
-                    <span>IMAGE</span>
+    <!-- Main Content -->
+    <div class="container">
+        <!-- History Section -->
+        <section class="content-section">
+            <h2 class="section-title">HISTORY</h2>
+            <div class="row">
+                <div class="col-lg-6 order-sm-2 order-md-1 mt-3">
+                    <p>Arunodaya Trust, a grassroots NGO in Andhra Pradesh, was founded by development activists 
+                        and social workers with a background in rural development. This gave the organization two key 
+                        advantages: starting with experienced field professionals and adopting a broad 
+                        socio-economic and environmental development perspective. Since 2008, Arunodaya Trust 
+                        has focused on rural wage issues, women’s rights, and child rights through a rights-based 
+                        approach, which continues to guide its programs today.</p>
+
                 </div>
-            
-                <div class="mt-3">
+                <div class="col-lg-6 order-sm-1">
+                    <div class="placeholder-image">
+                        IMAGE
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Organizational Beliefs Section -->
+        <section class="content-section">
+            <h2 class="section-title">ORGANIZATIONAL BELIEFS</h2>
+            <div class="row">
+                <div class="col-lg-6 order-lg-1 order-2 mt-4 mt-lg-0 order-sm-1 ">
+                    <div class="placeholder-image">
+                        IMAGE
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-2 order-1 order-sm-2  ">
                     
+                    <p>Arunodaya Trust is dedicated to addressing poverty through a holistic approach, tackling interconnected issues for comprehensive development.</p> 
+                    <ul class="accountability-list">
+                       <h6> 1. Core Issues: </h6>
+                       <li>Arunodaya Trust focuses on key issues such as wage movement, land rights, 
+                            livelihoods, food security, health, women’s rights, empowerment, fundamentalism, 
+                            and market exploitation.</li>
+                            <h6>2. Holistic Approach: </h6>
+                        <li>Poverty is seen as a result of interconnected problems that need to be addressed 
+                            simultaneously for sustainable development.  </li>
+                            <h6>3. Sectoral Diversity: </h6>
+                        <li>Unlike many NGOs, Arunodaya Trust works across all sectors of development, rather 
+                            than specializing in just one or two areas. </li>
+                        <h6>4. Community Participation: </h6>
+                        <li>True development occurs when the community identifies its needs and takes the lead 
+                            in the change process. </li>
+                        <h6>5. Transparency: </h6>
+                        <li>  Arunodaya Trust maintains a firm stance against corruption and bribery, earning 
+                            respect from the community and setting an example for other organizations</li>
+                        
+                    </ul>
+
                 </div>
             </div>
+        </section>
+
+       <!-- Accountability Section -->
+       <section class="content-section">
+        <h2 class="section-title">ACCOUNTABILITY</h2>
+        <div class="row">
+            <div class="col-lg-6 order-sm-2 order-md-1">
+                <p>Arunodaya Trust's accountability is based on five pillars: Christian commitments, serving 
+                    children and communities, shaping industry standards, ongoing learning, and 
+                    transparency. Current focus areas include: </p>
+                    
+                  
+                <ul class="accountability-list">
+                    <li>Feedback from children and communities on services. </li>
+                    <li> Transparency in reporting and financial disclosure. </li>
+                    <li>Protection from Sexual Exploitation and Abuse (PSEA). </li>
+                    <li>Anti-corruption efforts.</li>
+                    
+                </ul>
+                <p>These pillars guide the Trust's mission to promote child well-being and uphold integrity.</p>
+                <div class="d-flex">
+                    <button class="report-btn">ANNUAL REPORT</button>
+                    <button class="audit-btn">AUDIT REPORT</button>
+                </div>
+            </div>
+            <div class="col-lg-6 mt-4 mt-lg-0 order-sm-1 order-md-2" >
+                <div class="placeholder-image">
+                    IMAGE
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+      
             
             <!-- Certificates section -->
             <div class="mobile-section">
