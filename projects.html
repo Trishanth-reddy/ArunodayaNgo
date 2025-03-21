@@ -172,7 +172,7 @@
         }
         
         .placeholder-image {
-            background-color: #eee;
+            
             height: 300px;
             display: flex;
             justify-content: center;
@@ -209,7 +209,33 @@
         }
 
 
+        .placeholder-image {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #999;
+  border-radius: 5px;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
 
+@media screen and (max-width: 768px) {
+  .placeholder-image {
+    height: 200px;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .placeholder-image {
+    height: 150px;
+    font-size: 16px;
+  }
+}
         
         /* Reset and base styles */
         * {
@@ -372,7 +398,7 @@
         .contact-qr-placeholder {
             width: 200px;
             height: 200px;
-            background-color: #ddd;
+           
             display: flex;
             align-items: center;
             justify-content: center;
@@ -380,6 +406,38 @@
             color: #666;
             margin-top: 10px;
         }
+        /* Initially hide category items */
+.category-items {
+    max-height: 0; /* Initially hidden */
+    overflow: hidden; /* Hide overflow */
+    transition: max-height 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Show category items when the 'show' class is added */
+.category-items.show {
+    max-height: 500px; /* Adjust this value based on content height */
+}
+
+/* Style for active project item */
+.project-item.active {
+    /* Change this to your preferred active color */
+    font-weight: bold;
+}
+
+/* Style for category headers */
+.category-header {
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.project-item {
+    cursor: pointer;
+    padding: 8px 16px;
+    transition: background-color 0.3s ease;
+}
+
+
     
     </style>
 </head>
@@ -448,65 +506,83 @@
             <!-- Sidebar -->
             <div class="col-md-3">
                 <aside class="sidebar">
+                    <!-- Health Category -->
                     <div class="category mb-4">
                         <h2 class="category-header" data-category="health">HEALTH</h2>
-                        <ul class="category-items show">
-                            <li class="project-item active" data-project="care-support-1">Medical Support Program</li>
-                            <li class="project-item" data-project="care-support-2">Community Health Camps</li>
-                            <li class="project-item" data-project="care-support-3">Mental Health Services</li>
-                            <li class="project-item" data-project="care-support-4">Nutrition Programs</li>
-                            <li class="project-item" data-project="care-support-5">Elder Care Services</li>
-                            <li class="project-item" data-project="care-support-6">Maternal Health</li>
-                            <li class="project-item" data-project="care-support-7">Disease Prevention</li>
-                            <li class="project-item" data-project="care-support-8">Eye Care Camps</li>
-   
+                        <ul class="category-items">
+                            <li class="project-item active" data-project="care-support-1">HIV & Nutrition</li>
+                            <li class="project-item" data-project="care-support-2">REPRODUCTIVE AND CHILD HEALTH PROGRAMMING</li>
+                            <li class="project-item" data-project="care-support-3">MEDICAL CAMPS</li>
+                            <li class="project-item" data-project="care-support-4">HEALTH AND HYGIENE</li>
+                            <li class="project-item" data-project="care-support-5">ALCOHOL AND DRUG ABUSE</li>
+                            <li class="project-item" data-project="care-support-6">TOBACCO ABUSE</li>
+                            <li class="project-item" data-project="care-support-7">TB AND MALARIA PREVENTION</li>
+                            <li class="project-item" data-project="care-support-8">WORLD AIDS DAY</li>
                         </ul>
                     </div>
+    
+                    <!-- Education Category -->
                     <div class="category mb-4">
                         <h2 class="category-header" data-category="education">EDUCATION</h2>
                         <ul class="category-items">
-                            <li class="project-item" data-project="education-1">Education Support</li>
-                            <li class="project-item" data-project="education-2">School Programs</li>
-                            <li class="project-item" data-project="education-3">Scholarships</li>
+                            <li class="project-item" data-project="education-1">MISSION EDUCATION PROGRAM</li>
+                            <li class="project-item" data-project="education-2">BECAUSE I AM A GIRL PROGRAM</li>
+                            <li class="project-item" data-project="education-3">RIGHT TO EDUCATION AWARENESS PROGRAM</li>
+                            <li class="project-item" data-project="education-4">WATER, SANITATION, HEALTH AND HYGIENE IN SCHOOLS</li>
+                            <li class="project-item" data-project="education-5">AASHIRVAD FEEDING PROGRAM </li>
+                            <li class="project-item" data-project="education-6">ENVIRONMENT ASSESSMENT PROGRAM</li>
+                            <li class="project-item" data-project="education-7">PROVISION OF SAFE DRINKING WATER </li>
+                           
                         </ul>
                     </div>
+    
+                    <!-- Social Causes Category -->
                     <div class="category mb-4">
                         <h2 class="category-header" data-category="social">SOCIAL CAUSES</h2>
                         <ul class="category-items">
-                            <li class="project-item" data-project="social-1"> ORPHAN </li>
-                            <li class="project-item" data-project="social-2">Nourishment for the Homeless  </li>
-                            <li class="project-item" data-project="social-3">Awareness Campaigns</li>
+                            <li class="project-item" data-project="social-1">ORPHAN</li>
+                            <li class="project-item" data-project="social-2">Nourishment for the Homeless</li>
+                            <li class="project-item" data-project="social-3">AFTER SCHOOL EDUCATION AND FEEDING  
+                            </li>
                         </ul>
                     </div>
+    
+                    <!-- Livelihoods Category -->
                     <div class="category mb-4">
                         <h2 class="category-header" data-category="livelihoods">LIVELIHOODS</h2>
                         <ul class="category-items">
-                            <li class="project-item" data-project="livelihoods-1">Job Training</li>
-                            <li class="project-item" data-project="livelihoods-2">Skill Development</li>
-                            <li class="project-item" data-project="livelihoods-3">Employment Support</li>
+                            <li class="project-item" data-project="livelihoods-1">SMILE TWIN E LEARNING PROGRAM</li>
+                            <li class="project-item" data-project="livelihoods-2">AGRICULTURE AND NATURAL RESOURCE MANAGEMENT</li>
+                            <li class="project-item" data-project="livelihoods-3">REBUILDING LIVELIHOODS OF VICTIMS OF SEXUAL EXPLOITATION AND 
+                                TRAFFICKING </li>
+                            <li class="project-item" data-project="livelihoods-4">VOCATIONAL TRAINING</li>
+                            <li class="project-item" data-project="livelihoods-5">WOMEN EMPOWERMENT </li>
+                            <li class="project-item" data-project="livelihoods-6">WOMEN ENTREPRENEURSHIP</li>
+                            <li class="project-item" data-project="livelihoods-7">YOUTH WELFARE PROGRAM</li>
                         </ul>
                     </div>
                 </aside>
             </div>
-
+    
             <!-- Main Content -->
             <div class="col-md-9">
                 <section class="content" id="content-area">
                     <div class="image-container">
-                        <div class="placeholder-image">IMAGE</div>
+                        <img src="https://placehold.co/800x400" alt="Medical Support Program" class="placeholder-image" id="image">
                     </div>
                     <div class="text-content">
                         <h3 id="content-title">Medical Support Program</h3>
                         <br>
                         <p id="content-paragraph-1">Our Medical Support Program provides essential healthcare services to underserved communities. We focus on bringing quality medical care to those who need it most, including regular health check-ups, medication assistance, and referrals to specialized treatment when necessary. Our team of dedicated healthcare professionals works tirelessly to ensure that everyone has access to basic medical care regardless of their financial situation.</p>
-                    </div><h3 id="content-title1"></h3>
+                    </div>
+                    <h3 id="content-title1"></h3>
                     <br>
-                        <p id="content-paragraph-2">The program has been running successfully for over five years, serving thousands of individuals across multiple communities. We partner with local hospitals and medical professionals to expand our reach and effectiveness. Through this initiative, we've seen significant improvements in community health indicators and a reduction in preventable illnesses. Our goal is to continue expanding this vital service to reach even more people in need.</p>
-                    
+                    <p id="content-paragraph-2">The program has been running successfully for over five years, serving thousands of individuals across multiple communities. We partner with local hospitals and medical professionals to expand our reach and effectiveness. Through this initiative, we've seen significant improvements in community health indicators and a reduction in preventable illnesses. Our goal is to continue expanding this vital service to reach even more people in need.</p>
                 </section>
             </div>
         </div>
     </main>
+    
     <!-- Newsletter Section -->
     <div class="nl-container">
         <div class="nl-overlay"></div>
@@ -571,204 +647,7 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Data for different projects
-            const projectsData = {
-                // Health Projects
-                'care-support-1': {
-                    title: 'HIV & Nutrition ',
-                    image: 'medical-support.jpg',
-                    p1: 'HIV and malnutrition are interlinked—poor nutrition worsens HIV, and HIV speeds up malnutrition. People with HIV need a balanced diet, higher calorie intake, and often a multivitamin. Arunodaya Trust focuses on accountability, transparency, and community feedback in its programs. Nutritional Support Nutritional assessment and counseling are vital for HIV care, offering tailored advice on healthy eating, weight management, and managing side effects from treatment.',
-                    title1 : "Nutrition support for HIV/AIDS infected Children : ",
-                    p2: 'The HIV/AIDS epidemic has left many children orphaned and vulnerable, facing stigma, isolation, and poverty. These children often live in hunger, cared for by elderly relatives with limited resources. Arunodaya Trust, since 2008, has been supporting 120 HIV-infected orphans, providing essential care and nutritious food to help strengthen their immune systems. A balanced diet improves their health and helps manage symptoms and medication side effects. Each month, Arunodaya Trust provides food packages, including rice, oil, dhal, jaggery, ragi flour, and soap, costing Rs. 700 per package, ensuring these children have the nourishment they need to survive. ',
-                },
-                'care-support-2': {
-                    title: 'Community Health Camps',
-                    image: 'health-camp.jpg',
-                    p1: 'Our Community Health Camps bring medical services directly to remote and underserved areas. These camps offer free health screenings, basic treatments, and health education to communities that otherwise have limited access to healthcare facilities. Each camp is staffed by volunteer doctors, nurses, and health workers who provide comprehensive care.',
-                    p2: 'We organize dozens of health camps annually, reaching thousands of beneficiaries. These initiatives have been particularly effective in early detection of common diseases and connecting patients with ongoing care options. The health education component has also helped improve preventive health practices in these communities.'
-                },
-                'care-support-3': {
-                    title: 'Mental Health Services',
-                    image: 'mental-health.jpg',
-                    p1: 'Our Mental Health Services program addresses the often overlooked need for psychological support in vulnerable communities. We provide counseling, support groups, and psychiatric referrals for individuals experiencing mental health challenges. The program takes a holistic approach, recognizing the connection between mental wellbeing and overall health.',
-                    p2: 'Through this initiative, we\'ve helped reduce stigma around mental health issues and created safe spaces for people to seek help. Our trained counselors work with individuals dealing with anxiety, depression, trauma, and other mental health concerns. We also conduct awareness workshops to educate communities about mental health and self-care strategies.'
-                },
-                'care-support-4': {
-                    title: 'Nutrition Programs',
-                    image: 'nutrition.jpg',
-                    p1: 'Our Nutrition Programs focus on addressing malnutrition and promoting healthy eating habits in vulnerable populations. We provide nutritional supplements to children, pregnant women, and the elderly, along with education about balanced diets and food preparation. The program works closely with local communities to identify those most at risk.',
-                    p2: 'Impact assessment has shown significant improvements in child growth metrics and overall community health where our nutrition programs operate. We also work with local farmers to encourage the cultivation of nutritious crops, creating a sustainable food system that benefits both producers and consumers.'
-                },
-                'care-support-5': {
-                    title: 'Elder Care Services',
-                    image: 'elder-care.jpg',
-                    p1: 'Our Elder Care Services program provides specialized support to senior citizens in our communities. Services include regular health check-ups, medication management, physical therapy, and social activities designed to combat isolation. We recognize the unique healthcare needs of the elderly and strive to help them maintain dignity and quality of life.',
-                    p2: 'The program also includes training for family caregivers and community volunteers on elder care best practices. Through home visits and community centers, we\'ve created a network of support that allows seniors to age in place while receiving necessary care and social engagement.'
-                },
-                'care-support-6': {
-                    title: 'Maternal Health',
-                    image: 'maternal-health.jpg',
-                    p1: 'Our Maternal Health initiative focuses on providing comprehensive care to women during pregnancy, childbirth, and the postpartum period. We offer prenatal check-ups, nutritional support, safe delivery assistance, and postnatal care to ensure the health of both mothers and infants. Community health workers are trained to identify high-risk pregnancies and ensure timely interventions.',
-                    p2: 'Since launching this program, we\'ve seen a significant reduction in maternal and infant mortality rates in our target communities. We also provide education on family planning, breastfeeding, and infant care to new mothers, empowering them with knowledge and support during this critical time.'
-                },
-                'care-support-7': {
-                    title: 'Disease Prevention',
-                    image: 'disease-prevention.jpg',
-                    p1: 'Our Disease Prevention program takes a proactive approach to community health through vaccination drives, awareness campaigns, and preventive screenings. We focus on both communicable and non-communicable diseases, providing education and resources to help communities protect themselves from prevalent health threats.',
-                    p2: 'The program has been particularly effective in reducing the incidence of preventable diseases in children and vulnerable populations. Our community-based approach ensures that prevention strategies are culturally appropriate and accessible to all members of the community, regardless of education or economic status.'
-                },
-                'care-support-8': {
-                    title: 'Eye Care Camps',
-                    image: 'eye-care.jpg',
-                    p1: 'Our Eye Care Camps provide essential vision services to communities with limited access to ophthalmological care. Services include vision screening, prescription glasses, cataract surgery referrals, and treatment for common eye conditions. Each camp brings specialized equipment and professionals directly to underserved areas.',
-                    p2: 'These camps have restored sight to hundreds of individuals through cataract surgeries and have improved quality of life for thousands more through corrective eyewear. We also provide education on eye health and prevention of common vision problems, helping communities maintain better eye health in the long term.'
-                },
-                'care-support-9': {
-                    title: 'First Aid Training',
-                    image: 'first-aid.jpg',
-                    p1: 'Our First Aid Training program empowers community members with the skills to respond effectively to medical emergencies. Training sessions cover basic life support, wound care, fracture management, and response to common emergencies such as heart attacks, strokes, and choking. We provide hands-on practice with proper equipment and techniques.',
-                    p2: 'By creating a network of trained first responders within communities, we\'ve improved emergency response times and outcomes in areas with limited access to medical facilities. Participants receive certification and regular refresher courses to ensure their skills remain current and effective.'
-                },
-                
-                // Education Projects
-                'education-1': {
-                    title: 'Education Support Program',
-                    image: 'education-support.jpg',
-                    p1: 'Our Education Support Program provides comprehensive assistance to underprivileged students to help them succeed academically. This includes school supplies, textbooks, uniforms, and transportation assistance, removing the financial barriers that often prevent children from attending school regularly.',
-                    p2: 'The program also includes after-school tutoring and homework help, ensuring that students receive the academic support they need. By addressing both material needs and learning support, we\'ve seen significant improvements in attendance rates, academic performance, and school completion among participating students.'
-                },
-                'education-2': {
-                    title: 'School Improvement Initiative',
-                    image: 'school-improvement.jpg',
-                    p1: 'Our School Improvement Initiative works directly with local schools to enhance the quality of education. We provide teacher training, classroom resources, and infrastructure support to create better learning environments. Our approach focuses on sustainable improvements that continue beyond our direct involvement.',
-                    p2: 'Projects have included library development, computer lab setup, science equipment provision, and classroom renovation. We also work with school administrators to improve management practices and create child-friendly policies. Schools in our program have shown measurable improvements in teaching quality and student outcomes.'
-                },
-                'education-3': {
-                    title: 'Scholarship Program',
-                    image: 'scholarship.jpg',
-                    p1: 'Our Scholarship Program provides financial support to promising students from disadvantaged backgrounds, allowing them to pursue higher education or specialized training. Scholarships cover tuition fees, books, accommodation, and other essential expenses, removing financial barriers to educational advancement.',
-                    p2: 'Recipients are selected based on academic performance, financial need, and commitment to community service. Beyond financial support, scholars receive mentoring and career guidance to help them maximize their educational opportunities. Many of our alumni have gone on to successful careers and continue to give back to their communities.'
-                },
-                
-                // Social Causes
-                'social-1': {
-                    title: 'ORPHAN :  ',
-                    image: 'community-development.jpg',
-                    
-                    p1: "Not Alone is Arunodaya Trust's flagship program, empowering nearly 42 children across  Telangana, with 20 enrolled in 2016 alone. The program focuses on enhancing children's  academic achievements, building well-rounded personalities, and fostering volunteerism,  helping fatherless children break the cycle of poverty. Through home visits, life-skills workshops,  and community activities, the staff forge long-term relationships with the children they serve.",
-                    p2: "A notable example is Bhargav, an HIV+ child who lost both parents and faced extreme hardship. Thanks to the support from Arunodaya, Bhargav received life-saving medication and was adopted. Today, he is thriving, attending school, playing sports, and looking forward to a bright future.",
-                },
-                'social-2': {
-                    title: 'Nourishment for the Homeless : ',
-                    image: 'women-empowerment.jpg',
-                    p1: 'Hunger affects one in eight women, men, and children worldwide, with nearly a billion young people projected to face poverty by 2025 due to hunger and malnutrition. It remains the leading cause of death globally, with 820 million people suffering from chronic hunger. ',
-                    p2: 'In response, Arunodaya Trust conducted 72 poor feeding programs throughout the year across 22 slums in Hyderabad and Secunderabad, aiming to alleviate hunger and provide vital nourishment to those in need.'
-                },
-                'social-3': {
-                    title: 'Environmental Awareness',
-                    image: 'environmental-awareness.jpg',
-                    p1: 'Our Environmental Awareness campaign educates communities about environmental protection and sustainable practices. Through workshops, community clean-ups, and demonstration projects, we promote waste management, water conservation, and protection of natural resources. The program emphasizes practical, locally-relevant solutions.',
-                    p2: 'Schools are key partners in this initiative, with environmental education integrated into curricula and eco-clubs established to engage students. Community-led environmental projects have included tree planting, waste segregation systems, and conversion of unused spaces into community gardens, creating both environmental and social benefits.'
-                },
-                
-                // Livelihoods
-                'livelihoods-1': {
-                    title: 'Vocational Training',
-                    image: 'vocational-training.jpg',
-                    p1: 'Our Vocational Training program provides practical skills training to youth and adults, improving their employability and income potential. Courses are designed based on market demand and include both technical skills and soft skills needed for workplace success. Training centers are equipped with industry-standard tools and technology.',
-                    p2: 'Courses include computer skills, construction trades, hospitality, beauty services, and manufacturing skills. Participants receive certification upon completion and job placement assistance. Follow-up support helps ensure successful transition to employment or self-employment. Thousands of graduates have secured stable employment through this program.'
-                },
-                'livelihoods-2': {
-                    title: 'Microenterprise Development',
-                    image: 'microenterprise.jpg',
-                    p1: 'Our Microenterprise Development program supports entrepreneurs from marginalized communities in establishing and growing small businesses. Support includes business skills training, seed capital, microloans, and ongoing mentorship. We focus particularly on innovative and sustainable business models that address community needs.',
-                    p2: 'Entrepreneurship has proven to be a powerful pathway out of poverty for many families in our communities. Beyond individual businesses, we facilitate the formation of producer groups and cooperatives that allow small entrepreneurs to access larger markets. Success stories include artisan collectives, food processing businesses, and service providers.'
-                },
-                'livelihoods-3': {
-                    title: 'Sustainable Agriculture',
-                    image: 'sustainable-agriculture.jpg',
-                    p1: 'Our Sustainable Agriculture program helps small-scale farmers improve productivity while adopting environmentally-friendly practices. Training covers organic farming methods, water management, crop diversification, and market access. We provide seeds, tools, and technical support to facilitate transition to more sustainable and profitable farming.',
-                    p2: 'Farmers in the program have experienced increased yields and incomes while reducing dependence on chemical inputs. We also support the formation of farmer producer organizations that strengthen collective bargaining power and facilitate knowledge sharing. The program emphasizes climate resilience and adaptation to changing environmental conditions.'
-                }
-            };
-            
-            // DOM elements
-            const contentTitle = document.getElementById('content-title');
-            const contentTitle1 = document.getElementById('content-title1');
-
-            const contentParagraph1 = document.getElementById('content-paragraph-1');
-            const contentParagraph2 = document.getElementById('content-paragraph-2');
-            const categoryHeaders = document.querySelectorAll('.category-header');
-            const projectItems = document.querySelectorAll('.project-item');
-            
-            // Function to update content based on project
-            function updateContent(projectId) {
-                const project = projectsData[projectId];
-                if (project) {
-                    contentTitle.textContent = project.title;
-                    contentParagraph1.textContent = project.p1;
-                    contentParagraph2.textContent = project.p2;
-                    contentTitle1.textContent = project.title1;
-
-                    
-                    // Update active class
-                    projectItems.forEach(item => {
-                        item.classList.remove('active');
-                        if (item.dataset.project === projectId) {
-                            item.classList.add('active');
-                        }
-                    });
-                }
-            }
-            
-            // Event listeners for project items
-            projectItems.forEach(item => {
-                item.addEventListener('click', function() {
-                    const projectId = this.dataset.project;
-                    updateContent(projectId);
-                });
-            });
-            
-            // Toggle category items on mobile
-            categoryHeaders.forEach(header => {
-                header.addEventListener('click', function() {
-                    // Check if we're on mobile view
-                    if (window.innerWidth <= 768) {
-                        const categoryItems = this.nextElementSibling;
-                        categoryItems.classList.toggle('show');
-                        
-                        // Hide other category items
-                        document.querySelectorAll('.category-items').forEach(items => {
-                            if (items !== categoryItems) {
-                                items.classList.remove('show');
-                            }
-                        });
-                    }
-                    
-                    // Show first project of the category if a project isn't already selected
-                    const categoryId = this.dataset.category;
-                    const firstProjectInCategory = document.querySelector(`.project-item[data-project^="${categoryId}"]`);
-                    if (firstProjectInCategory) {
-                        updateContent(firstProjectInCategory.dataset.project);
-                    }
-                });
-            });
-            
-            // Show all items on desktop
-            window.addEventListener('resize', function() {
-                if (window.innerWidth > 768) {
-                    document.querySelectorAll('.category-items').forEach(items => {
-                        items.classList.add('show');
-                    });
-                }
-            });
-            
-            // Initialize with first project
-            updateContent('care-support-1');
-        });
-    </script>
+    <script src = "projects.js"></script>
      <!-- Leaflet.js Library -->
      <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
      <script>
@@ -790,5 +669,6 @@
  
          document.addEventListener("DOMContentLoaded", initMap);
      </script>
+     
 </body>
 </html>
