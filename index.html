@@ -101,11 +101,11 @@
             </div>
 
             <!-- Mobile: Text Below Video -->
-            <div class="col-md-6 order-md-1">
-                <p class="about-text">
+            <div class="col-md-6 order-md-1 ">
+                <p class="about-text ">
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five centuries, but also the leap into electronic typesetting.
                 </p>
-                <p class="about-text">
+                <p class="about-text ">
                     Remaining when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                 </p>
                 
@@ -121,92 +121,65 @@
         <div class="chairman-img" style="background-color: grey;"></div>
         <h2 class="section-title"><span class="at-highlight">CHAIRMAN'S</span> <span class="at-red">MESSAGE</span></h2>
         <p class="chairman-text">Lorem Ipsum is simply dummy text of the printin typesetting, dummy text ever when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
-        <button class="read-more-btn" onclick="window.location.href = 'chairmanmessage.html'">READ MORE</button>
+        <button class="cha-read-more-btn" onclick="window.location.href = 'chairmanmessage.html'">READ MORE</button>
     </section>
 
     <!-- Milestones section -->
-    <section class="milestones">
-        <h1>MILESTONES</h1>
-        <div class="timeline">
-            <div class="milestone left">
-                <h3>November 21, 2008</h3>
-                <p>Registered Under Trust Act 1882 Bearing No 20 of 2008 on 21.11.2008</p>
-            </div>
-            <div class="milestone right">
-                <h3>May 11, 2009</h3>
-                <p>Establishment of Arunodaya Orphan Home with 12 Children of HIV Infected & Affected Communities</p>
-            </div>
-            <div class="milestone left">
-                <h3>May 28, 2010</h3>
-                <p>Registered Under Income Tax 1961 Under Section 12A dated 28.05.2010 Initiated Mission Education & STeP supported by Smile Foundation, New Delhi</p>
-            </div>
-            <div class="milestone right">
-                <h3>August 4, 2011</h3>
-                <p>Registered under Income Trust Act 1961 Under Section 80G dated 04.08.2011. Inauguration of Ashirwad Feeding Program Supported by Hand of Hope, Hyderabad</p>
-            </div>
-            <div class="milestone left">
-                <h3>February 1, 2012</h3>
-                <p>Launching of Care & Support Program supporting 82 HIV Infected Families</p>
-            </div>
-            <div class="milestone right">
-                <h3>May 10, 2013</h3>
-                <p>Registered Under Foreign Contribution Regulation Act Dated 10.05.2013</p>
-            </div>
-            <div class="milestone left">
-                <h3>May 7, 2014</h3>
-                <p>Construction of Own Shelter Home providing Food, Clothing, Shelter, and Education to 40 Children and Training Centre</p>
-            </div>
-            <div class="milestone right">
-                <h3>November 1, 2015</h3>
-                <p>Selected as Best NGO in Shamirpet Mandal by the Newly Formed Telangana Government</p>
-            </div>
-            <div class="milestone left">
-                <h3>2016</h3>
-                <p>Pradhan Mantri Kaushal Vikas Yojana (PMKVY) Project</p>
-            </div>
-            <div class="milestone right">
-                <h3>June 1, 2016</h3>
-                <p>Establishment of New Skill Development Centre at Guntur, Andhra Pradesh</p>
-            </div>
-            <div class="milestone left">
-                <h3>2017</h3>
-                <p>SC Corporation Project, Govt of Andhra Pradesh</p>
-            </div>
-            <div class="milestone right">
-                <h3>2018</h3>
-                <p>Deen Dayal Upadhyaya Grameen Kaushalya Yojana (DDUGKY) Project</p>
-            </div>
-            <div class="milestone left">
-                <h3>2019</h3>
-                <p>Corporate Social Responsibility Project of Gland Pharma - Urban Ultra Poor Program</p>
-            </div>
-            <div class="milestone right">
-                <h3>2020</h3>
-                <p>Corporate Social Responsibility Project of Gland Pharma - COVID-19 Relief Distribution to 12,000 Families in 14 Mandals of Medchal</p>
+    <div class="timeline-wrapper">
+        <div class="timeline-nav-left">
+            <button class="scroll-button" data-direction="left" aria-label="Scroll left">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.5 15L7.5 10L12.5 5" stroke="#1A1F2C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="timeline-nav-right">
+            <button class="scroll-button" data-direction="right" aria-label="Scroll right">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.5 15L12.5 10L7.5 5" stroke="#1A1F2C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="timeline-container" id="timeline-container">
+            <div class="timeline-content">
+                <svg class="timeline-svg" id="timeline-svg">
+                    <path class="timeline-path" d="" stroke="#e0e0e0" stroke-width="3" stroke-dasharray="5,5" fill="none" />
+                </svg>
+
+                <div class="timeline-events" id="timeline-events">
+                    <!-- Timeline events will be generated by JavaScript -->
+                </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- Impact section -->
-    <section class="impact">
-        <h2 class="section-title"><span class="at-red">IMPACT</span> </h2>
-        <div class="container">
-            <div class="impact-stack-container">
-                <div class="impact-card" onclick="focusImpactCard(this)">
-                    <div class="impact-card-content">Innovation</div>
-                </div>
-                <div class="impact-card" onclick="focusImpactCard(this)">
-                    <div class="impact-card-content"></div>
-                </div>
-                <div class="impact-card" onclick="focusImpactCard(this)">
-                    <div class="impact-card-content">Purpose</div>
-                </div>
-                <div class="impact-card" onclick="focusImpactCard(this)">
-                    <div class="impact-card-content">Action</div>
-                </div>
-            </div>
+    <h2 class="section-title"><span class="at-highlight">OUR</span> <span class="at-red"> IMPACT</span></h2>
+
+    <div class="impact-section">
+        <div class="impact-card">
+            <div class="impact-counter" data-target="15">0</div>
+            <div class="impact-label">LAC</div>
+            <div class="impact-description">Children and their families are impacted every year</div>
         </div>
-    </section>
+        <div class="impact-card">
+            <div class="impact-counter" data-target="2000">0</div>
+            <div class="impact-label">VILLAGES</div>
+            <div class="impact-description">And slums are reached out to across the country</div>
+        </div>
+        <div class="impact-card">
+            <div class="impact-counter" data-target="400">0</div>
+            <div class="impact-label">PROJECTS</div>
+            <div class="impact-description">Focused on education, healthcare, and women empowerment</div>
+        </div>
+        <div class="impact-card">
+            <div class="impact-counter" data-target="25">0</div>
+            <div class="impact-label">STATES</div>
+            <div class="impact-description">Are reached including the remotest areas</div>
+        </div>
+    </div>
 
     <!-- Core Team section -->
     <div id="app">
@@ -231,13 +204,13 @@
                 <p>Lead Designer</p>
             </div>
            
-            <!-- <button class="read-more-btn2">Know More</button> -->
+            <button class="read-more-btn">Know More</button>
             
         </div>
         <div class="text-section">
             <p>Our team of dedicated professionals brings together decades of experience in technology and innovation. Each member contributes unique skills and perspectives, driving our company's success forward.</p>
         </div>
-        <button class="read-more-btn" >Know More</button>
+        
     </div>
 
 
@@ -256,9 +229,10 @@
             <img src="https://source.unsplash.com/random/154x144?art" alt="Art" class="item7" loading="lazy">
             <img src="https://source.unsplash.com/random/271x144?animals" alt="Animals" class="item8" loading="lazy">
           </div>
+        <button class="read-more-btn" onclick="window.location.href = 'gallery.html'">SEE MORE</button>
         </div>
   
-        <button class="read-more-btn" onclick="window.location.href = 'gallery.html'">SEE MORE</button>
+        
       </div>
     
     <!-- CSR Partners section -->
@@ -279,7 +253,7 @@
 <div class="nl-container">
     <div class="nl-overlay"></div>
     <div class="nl-content">
-        <div class="nl-text">
+        <div class="nl-text ">
             <h2>Subscribe <br> Newsletter</h2>
             <p>Sign up for our yearly newsletter to get the latest news, volunteer opportunities.</p>
         </div>
@@ -345,6 +319,8 @@
 </div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="script.js" type="module"></script>
+<script src="milestones.js" type="module"></script>
+
     <script>
          
     </script>

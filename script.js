@@ -253,3 +253,27 @@ class TeamCarousel {
 document.addEventListener('DOMContentLoaded', () => {
     new TeamCarousel();
 });
+function animateImpactCounters() {
+    const counters = document.querySelectorAll('.impact-counter');
+    const duration = 2000; // Animation duration in ms
+    const steps = 60; // Number of steps
+    const interval = duration / steps;
+
+    counters.forEach(counter => {
+        const targetValue = +counter.getAttribute('data-target');
+        let currentValue = 0;
+        let incrementValue = targetValue / steps;
+
+        const counterInterval = setInterval(() => {
+            currentValue += incrementValue;
+            if (currentValue >= targetValue) {
+                counter.textContent = targetValue;
+                clearInterval(counterInterval);
+            } else {
+                counter.textContent = Math.floor(currentValue);
+            }
+        }, interval);
+    });
+}
+
+window.onload = animateImpactCounters;
