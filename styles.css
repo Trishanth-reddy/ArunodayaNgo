@@ -539,7 +539,21 @@ body {
             margin: 0 auto;
             color: #666;
         }
-
+       
+        
+        @media (max-width: 768px) {
+            .ch-read-more-btn {
+                padding: 8px 20px;
+                font-size: 0.9rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .ch-read-more-btn {
+                padding: 6px 15px;
+                font-size: 0.8rem;
+            }
+        }
         .read-more-btn {
             display: inline-block;
             margin-top: 20px;
@@ -550,6 +564,19 @@ body {
             border-radius: 25px;
             font-weight: bold;
             cursor: pointer;
+        }
+        .ch-read-more-btn{
+           
+                display: inline-block;
+                margin-top: 20px;
+                padding: 8px 15px;
+                background-color: #FF6B6B;
+                color: white;
+                border: none;
+                border-radius: 25px;
+                font-weight: bold;
+                cursor: pointer;
+           
         }
 
         /* Icons placeholder */
@@ -745,6 +772,7 @@ body {
             background-color: #ff6363;
             
         }
+      
   
         /* Tablet Layout */
         @media (max-width: 768px) {
@@ -800,6 +828,7 @@ body {
                 width: 80%;
                 max-width: 200px;
             }
+            
         }
 
         .csr-partners {
@@ -836,8 +865,14 @@ body {
             border: 1px solid #ddd;
             margin-right: 20px; /* Increased spacing */
             flex-shrink: 0;
+            overflow: hidden; /* Ensure images don't overflow the box */
         }
         
+        .partner-logo img {
+            width: 100%; /* Make the image fill the container */
+            height: 100%; /* Make the image fill the container */
+            object-fit: contain; /* Scale the image to fit while maintaining aspect ratio */
+        }
         /* Infinite scrolling animation */
         @keyframes scroll {
             0% {
@@ -1327,7 +1362,7 @@ body {
             background-color: var(--hover-color);
             transform: translateX(-50%) scale(1.05);
         }
-
+        
         .text-section {
             max-width: 800px;
             margin: 3rem auto 0;
