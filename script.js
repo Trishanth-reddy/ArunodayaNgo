@@ -111,28 +111,46 @@ function focusImpactCard(card) {
     });
 }
 
-// Animate impact counters
-function animateImpactCounters() {
-    const counters = document.querySelectorAll('.impact-counter');
-    const duration = 2000; // Animation duration in ms
-    const steps = 60; // Number of steps
-    const interval = duration / steps;
+// Animate impact counters with Intersection Observer
+document.addEventListener('DOMContentLoaded', () => {
+    const impactSection = document.querySelector('.impact-section');
+    
+    function animateImpactCounters(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counters = entry.target.querySelectorAll('.impact-counter');
+                const duration = 2000; // Animation duration in ms
+                const steps = 60; // Number of steps
+                const interval = duration / steps;
 
-    counters.forEach(counter => {
-        const targetValue = +counter.getAttribute('data-target');
-        let currentValue = 0;
-        let incrementValue = targetValue / steps;
+                counters.forEach(counter => {
+                    const targetValue = +counter.getAttribute('data-target');
+                    let currentValue = 0;
+                    let incrementValue = targetValue / steps;
 
-        const counterInterval = setInterval(() => {
-            currentValue += incrementValue;
-            if (currentValue >= targetValue) {
-                counter.textContent = targetValue;
-                clearInterval(counterInterval);
-            } else {
-                counter.textContent = Math.floor(currentValue);
+                    const counterInterval = setInterval(() => {
+                        currentValue += incrementValue;
+                        if (currentValue >= targetValue) {
+                            counter.textContent = targetValue;
+                            clearInterval(counterInterval);
+                        } else {
+                            counter.textContent = Math.floor(currentValue);
+                        }
+                    }, interval);
+                });
+
+                // Unobserve the section after animation to prevent repeated triggering
+                observer.unobserve(entry.target);
             }
-        }, interval);
-    });
-}
+        });
+    }
 
-window.onload = animateImpactCounters;
+    if (impactSection) {
+        const observer = new IntersectionObserver(animateImpactCounters, {
+            root: null, // viewport
+            threshold: 0.1 // trigger when 10% of the section is visible
+        });
+
+        observer.observe(impactSection);
+    }
+});
