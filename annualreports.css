@@ -25,15 +25,10 @@ body {
 }
 
 /* Contact Bar */
-.contact-bar {
+  /* Contact Bar */
+  .contact-bar {
     background-color: var(--primary-color);
     padding: 0.5rem 0;
-}
-
-.contact-bar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .contact-info a {
@@ -49,6 +44,7 @@ body {
     margin-left: 1rem;
     font-size: 1.2rem;
 }
+
 
 /* Main Navigation */
 .main-nav {

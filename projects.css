@@ -2,14 +2,6 @@
     --primary-color: #7DDCD9;
     --secondary-color: #FF7171;
     --text-color: #333;
-    --white: #fff;
-    --max-width: 1200px;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
 body {
@@ -18,22 +10,10 @@ body {
     color: var(--text-color);
 }
 
-.container {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 0 1rem;
-}
-
 /* Contact Bar */
 .contact-bar {
     background-color: var(--primary-color);
     padding: 0.5rem 0;
-}
-
-.contact-bar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .contact-info a {
@@ -50,17 +30,16 @@ body {
     font-size: 1.2rem;
 }
 
-/* Main Navigation */
-  /* Logo Section */
-  .logo-section {
+/* Logo Section */
+.logo-section {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
 .logo {
-    width: 50px;
-    height: 50px;
+    width: 370px;
+    height: 80px;
 }
 
 /* Navigation */
@@ -80,20 +59,8 @@ body {
 
 /* Custom Buttons */
 .btn-primary-custom {
-    background-color: var(--primary-color) !important;
-    color: white !important;
-    border-radius: 75px;
-    padding: 0.5rem 1.2rem;
-    font-weight: 600;
-    font-size: 14px;
-    text-transform: uppercase;
-    border: none;
-    transition: transform 0.2s ease;
-}
-
-.btn-secondary-custom {
-    background-color: var(--secondary-color) !important;
-    color: white !important;
+    background-color: var(--primary-color);
+    color: white;
     border-radius: 25px;
     padding: 0.5rem 1.2rem;
     font-weight: 600;
@@ -103,84 +70,152 @@ body {
     transition: transform 0.2s ease;
 }
 
-/* .btn-primary-custom:hover, .btn-secondary-custom:hover {
+.btn-secondary-custom {
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 25px;
+    padding: 0.5rem 1.2rem;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    border: none;
+    transition: transform 0.2s ease;
+}
+
+.btn-primary-custom:hover, .btn-secondary-custom:hover {
     transform: translateY(-2px);
-    color: rgb(17, 129, 149);
-} */
-
-/* Main Content */
-.covid-section {
-    padding: 3rem 0;
+    color: white;
 }
 
-.covid-section h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 2.5rem;
+/* Login Button */
+.login {
+    text-decoration: none;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
 }
 
-.image-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-    padding: 0 1rem;
-    max-width: var(--max-width);
-    margin: 0 auto;
+.login:hover {
+    color: var(--primary-color);
 }
 
-.image-card {
-    aspect-ratio: 1;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+/* Sidebar */
+.sidebar {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
 }
 
-.image-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
+.sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: var(--text-color);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.image-card:hover img {
-    transform: scale(1.05);
+.sidebar h2:after {
+    content: "▼";
+    font-size: 12px;
+    color: var(--primary-color);
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .image-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
+.sidebar ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 30px;
 }
 
+.sidebar li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.sidebar li:hover {
+    color: var(--primary-color);
+}
+
+.sidebar li.active {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Content Section */
+.content {
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    margin-bottom: 20px;
+    overflow:  hidden;
+}
+
+
+
+.text-content p {
+    margin-bottom: 15px;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-
-    .mobile-menu-btn {
-        display: block;
-    }
-
-    .image-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
     .contact-info {
         display: none;
     }
+    
+    .sidebar {
+        margin-bottom: 20px;
+    }
 }
 
-@media (max-width: 480px) {
-    .image-grid {
-        grid-template-columns: 1fr;
+/* Hide sidebar toggleable sections by default on mobile */
+@media (max-width: 768px) {
+    .sidebar ul {
+        display: none;
     }
+    
+    .sidebar ul.show {
+        display: block;
+    }
+}
 
-    .social-links {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
+
+.placeholder-image {
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 24px;
+color: #999;
+border-radius: 5px;
+max-width: 100%;
+width: 100%;
+box-sizing: border-box;
+overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+.placeholder-image {
+height: 200px;
+font-size: 18px;
+}
+}
+
+@media screen and (max-width: 480px) {
+.placeholder-image {
+height: 150px;
+font-size: 16px;
+}
 }
 
 /* Reset and base styles */
@@ -344,11 +379,41 @@ body{
 .contact-qr-placeholder {
     width: 200px;
     height: 200px;
-    background-color: #ddd;
+   
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 14px;
     color: #666;
     margin-top: 10px;
+}
+/* Initially hide category items */
+.category-items {
+max-height: 0; /* Initially hidden */
+overflow: hidden; /* Hide overflow */
+transition: max-height 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Show category items when the 'show' class is added */
+.category-items.show {
+max-height: 500px; /* Adjust this value based on content height */
+}
+
+/* Style for active project item */
+.project-item.active {
+/* Change this to your preferred active color */
+font-weight: bold;
+}
+
+/* Style for category headers */
+.category-header {
+cursor: pointer;
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+.project-item {
+cursor: pointer;
+padding: 8px 16px;
+transition: background-color 0.3s ease;
 }

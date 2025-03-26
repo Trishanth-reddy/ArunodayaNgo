@@ -208,7 +208,7 @@
         }
         
         .certificate-img {
-            background-color: #eaeaea;
+            
             height: 100px;
             display: flex;
             justify-content: center;
@@ -239,6 +239,55 @@
             margin-top: 20px;
         }
         
+        /* Main content styles */
+        .section-title {
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .content-section {
+            padding: 40px 0;
+        }
+        
+        .placeholder-image {
+            
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-weight: bold;
+        }
+        
+        /* Footer buttons */
+        .report-btn {
+            background-color: #FF6F61;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 25px;
+            margin-right: 10px;
+            margin-top: 20px;
+        }
+        
+        .audit-btn {
+            background-color: white;
+            color: #333;
+            border: 1px solid #FF6F61;
+            padding: 8px 20px;
+            border-radius: 25px;
+            margin-top: 20px;
+        }
+        
+        .accountability-list {
+            padding-left: 20px;
+        }
+        
+        .accountability-list li {
+            margin-bottom: 10px;
+        }
+        
         section {
             padding: 40px 0;
         }
@@ -254,6 +303,7 @@
             line-height: 1.6;
             color: #333;
         }
+
         /* Newsletter Section Styles */
         .nl-container {
             position: relative;
@@ -426,12 +476,59 @@
 .see-more-button:hover {
     background-color: #FF5A5A; /* Slightly darker pink on hover */
 }
+.image-container {
+  width: 100%;
+  max-width: 800px; /* Adjust as needed */
+  margin: auto;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Optional for rounded corners */
+}
+.covid-section {
+    padding: 3rem 0;
+}
+
+.covid-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 0 1rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.image-card {
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.image-card:hover img {
+    transform: scale(1.05);
+}
 
     
     </style>
 </head>
 <body>
-    <!-- Contact Bar -->
+       <!-- Contact Bar -->
  <div class="contact-bar">
     <div class="container">
         <div class="row">
@@ -440,10 +537,10 @@
                 <a href="mailto:arunodayatrust2008@gmail.com"><i class="fa-solid fa-envelope"></i> arunodayatrust2008@gmail.com</a>
             </div>
             <div class="col-md-6 social-links text-md-end text-center">
-                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/arunodayatrust/#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://x.com/arunodayatrust2" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.facebook.com/arunodaya.trust" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.youtube.com/@arunodayatrust8433" aria-label="LinkedIn"><i class="fa-brands fa-youtube"></i></a>
             </div>
         </div>
     </div>
@@ -452,9 +549,10 @@
  <nav class="navbar navbar-expand-lg bg-white">
     <div class="container">
         <div class="logo-section">
-            <img src="https://placehold.co/50x50" alt="Arunodaya Trust Logo" class="logo">
+            <img src="https://res.cloudinary.com/dxnlxrkmg/image/upload/v1742640932/Screenshot_2025-03-22_162442_ylhfjn.png" alt="Arunodaya Trust Logo" class="logo">
             <h1 class="fs-4 mb-0">Arunodaya Trust</h1>
         </div>
+        
         
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -488,120 +586,221 @@
     </div>
 </nav>   
         
-        <!-- Mobile content (full-width layout as shown in the image) -->
-        <div class="mobile-content">
-            <!-- Logo placeholder -->
-            <div class="mobile-logo">
-                <span>IMAGE</span>
-            </div>
-            
-            <!-- History section -->
-            <div class="mobile-section">
-                <h2 class="section-heading-mobile">HISTORY</h2>
-                <p>Lorem ipsum is simply dummy text of the printing typesetting industry's standard blind text. When an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</p>
-                <p>Lorem ipsum is simply dummy text of the printing typesetting industry's standard blind text. When an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</p>
-            </div>
-            
-            <!-- Image placeholder -->
-            <div class="mobile-img">
-                <span>IMAGE</span>
-            </div>
-            
-            <!-- Organizational beliefs section -->
-            <div class="mobile-section">
-                <h2 class="section-heading-mobile">ORGANIZATIONAL BELIEFS</h2>
-                <p>Lorem ipsum is simply dummy text of the printing typesetting industry's standard blind text. When an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</p>
-                <p>Lorem ipsum is simply dummy text of the printing typesetting industry's standard blind text. When an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</p>
-            </div>
-            
-            <!-- Image placeholder -->
-            <div class="mobile-img">
-                <span>IMAGE</span>
-            </div>
-            
-            <!-- Accountability section -->
-            <div class="mobile-section d-flex flex-row justify-content-between">
-                <div>  
-                    <h2 class="section-heading-mobile">ACCOUNTABILITY</h2>
-                    <p>Arundaya Trust commitment to accountability is based on the pillars:</p>
-                    <ul>
-                        <li>Transparency in financial transactions</li>
-                        <li>The organization's Christian commitments</li>
-                        <li>Regular updates on ongoing initiatives</li>
-                        <li>A commitment to serving Children and communities</li>
-                        <li>A determination to help those industry standards</li>
-                        <li>Focus on education and learning</li>
-                        <li>And Transparency</li>
-                    </ul>
-                <div>
-                    <a href="annualreports.html" class="mobile-report-btn" >ANNUAL REPORT</a>
-                    <a href="auditreports.html" class="mobile-audit-btn">AUDIT REPORT</a></div>
-                </div>  
-                <div class="mobile-img">
-                    <span>IMAGE</span>
+    <!-- Main Content -->
+    <div class="container">
+        <!-- History Section -->
+        <section class="content-section">
+            <h2 class="section-title">HISTORY</h2>
+            <div class="row">
+                <div class="col-lg-6 order-sm-2 order-md-1 mt-3">
+                    <p>Arunodaya Trust, a grassroots NGO in Andhra Pradesh, was founded by development activists 
+                        and social workers with a background in rural development. This gave the organization two key 
+                        advantages: starting with experienced field professionals and adopting a broad 
+                        socio-economic and environmental development perspective. Since 2008, Arunodaya Trust 
+                        has focused on rural wage issues, women’s rights, and child rights through a rights-based 
+                        approach, which continues to guide its programs today.</p>
+
                 </div>
-            
-                <div class="mt-3">
+                <div class="col-lg-6 order-sm-1">
+                    <div class="image-container">
+                        <img src = "https://res.cloudinary.com/dxnlxrkmg/image/upload/v1742634494/13ba088cecb28a1fae02c50a0144c24d_dak6sz.jpg" alt="Placeholder Image class = "img"">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Organizational Beliefs Section -->
+        <section class="content-section">
+            <h2 class="section-title">ORGANIZATIONAL BELIEFS</h2>
+            <div class="row">
+                <div class="col-lg-6 order-lg-1 order-2 mt-4 mt-lg-0 order-sm-1 ">
+
+                    <div class="image-container">
+                        <img src = "https://res.cloudinary.com/dxnlxrkmg/image/upload/v1742634514/plastic_ban_pictures_1_xc5jc3.webp" alt="Placeholder Image class = "img"">
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-2 order-1 order-sm-2  ">
                     
+                    <p>Arunodaya Trust is dedicated to addressing poverty through a holistic approach, tackling interconnected issues for comprehensive development.</p> 
+                    <ul class="accountability-list">
+                       <h6> 1. Core Issues: </h6>
+                       <li>Arunodaya Trust focuses on key issues such as wage movement, land rights, 
+                            livelihoods, food security, health, women’s rights, empowerment, fundamentalism, 
+                            and market exploitation.</li>
+                            <h6>2. Holistic Approach: </h6>
+                        <li>Poverty is seen as a result of interconnected problems that need to be addressed 
+                            simultaneously for sustainable development.  </li>
+                            <h6>3. Sectoral Diversity: </h6>
+                        <li>Unlike many NGOs, Arunodaya Trust works across all sectors of development, rather 
+                            than specializing in just one or two areas. </li>
+                        <h6>4. Community Participation: </h6>
+                        <li>True development occurs when the community identifies its needs and takes the lead 
+                            in the change process. </li>
+                        <h6>5. Transparency: </h6>
+                        <li>  Arunodaya Trust maintains a firm stance against corruption and bribery, earning 
+                            respect from the community and setting an example for other organizations</li>
+                        
+                    </ul>
+
                 </div>
             </div>
-            
-            <!-- Certificates section -->
-            <div class="mobile-section">
-                <h2 class="section-heading-mobile">CERTIFICATES</h2>
-                <div class="row g-2">
-                    <div class="col-6">
-                        <div class="mobile-certificate-img">
-                            <span>IMAGE</span>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="mobile-certificate-img">
-                            <span>IMAGE</span>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="mobile-certificate-img">
-                            <span>IMAGE</span>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="mobile-certificate-img">
-                            <span>IMAGE</span>
-                        </div>
-                    </div>
+        </section>
+
+       <!-- Accountability Section -->
+       <section class="content-section mt-3">
+        <h2 class="section-title">ACCOUNTABILITY</h2>
+        <div class="row">
+            <div class="col-lg-6 order-sm-2 order-md-1">
+                <p>Arunodaya Trust's accountability is based on five pillars: Christian commitments, serving 
+                    children and communities, shaping industry standards, ongoing learning, and 
+                    transparency. Current focus areas include: </p>
+                   
+                  
+                <ul class="accountability-list">
+                    <li>Feedback from children and communities on services. </li>
+                    <li> Transparency in reporting and financial disclosure. </li>
+                    <li>Protection from Sexual Exploitation and Abuse (PSEA). </li>
+                    <li>Anti-corruption efforts.</li>
+                    
+                </ul>
+                <p>These pillars guide the Trust's mission to promote child well-being and uphold integrity.</p>
+                <div class="d-flex">
+                    <button class="report-btn">ANNUAL REPORT</button>
+                    <button class="audit-btn">AUDIT REPORT</button>
                 </div>
             </div>
-            <div class="mobile-section">
-                <h2 class="section-heading-mobile">Documents</h2>
-                <div class="row g-2">
-                    <div class="col-6">
-                        <div class="mobile-certificate-img">
-                            <span>IMAGE</span>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="mobile-certificate-img">
-                            <span>IMAGE</span>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="mobile-certificate-img">
-                            <span>IMAGE</span>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="mobile-certificate-img">
-                            <span>IMAGE</span>
-                        </div>
-                    </div>
+            <div class="col-lg-6  mt-lg-0 order-sm-1 order-md-2" >
+                <div class="image-container">
+                    <img src = "https://res.cloudinary.com/dxnlxrkmg/image/upload/v1742893871/Screenshot_2025-03-25_144059_qjff1m.png" alt="Placeholder Image class = "img">
                 </div>
             </div>
         </div>
+    </section>
+</div>
+
+      
+            
+            <!-- Certificates section -->
+           
+            <section class="covid-section">
+                <h2>Certificates</h2>
+                <div class="image-grid">
+                    <div class="image-card">
+                        <a href="https://www.arunodaya.org/images/certificates/star2020.jpg" target="_blank">
+                            <img src="https://res.cloudinary.com/dxnlxrkmg/image/upload/v1742896107/Screenshot_2025-03-25_151747_gebvhp.png" alt="View Annual Report">
+                        </a>
+                    </div>
+                    <div class="image-card">
+                        <a href="https://www.arunodaya.org/images/certificates/trs.jpg" target="_blank">
+                            <img src="https://res.cloudinary.com/dxnlxrkmg/image/upload/v1742896261/Screenshot_2025-03-25_152036_i4zvvy.png" alt="View Annual Report">
+                        </a>
+                    </div>
+                    <div class="image-card">
+                        <a href="https://www.arunodaya.org/images/certificates/Arunodaya-FullDEED-2019.pdf" target="_blank">
+                            <img src="https://res.cloudinary.com/dxnlxrkmg/image/upload/v1742895942/Screenshot_2025-03-25_151525_e02ydw.png" alt="View Annual Report">
+                        </a>
+                    </div>
+                    <div class="image-card">
+                    
+                            <img src="https://res.cloudinary.com/dxnlxrkmg/image/upload/v1742896604/Screenshot_2025-03-25_152628_bghtbk.png" alt="View Annual Report">
+                        </a>
+                    </div>
+                    <div class="image-card">
+                        <a href="https://www.arunodaya.org/images/certificates/TrusteePan_Aadhar.pdf" target="_blank">
+                            <img src="https://res.cloudinary.com/dxnlxrkmg/image/upload/v1742896726/Screenshot_2025-03-25_152814_f6bs4w.png" alt="View Annual Report">
+                        </a>
+                    </div>
+                    <div class="image-card">
+                        <a href="https://www.arunodaya.org/images/certificates/BODCHART.pdf" target="_blank">
+                            <img src="https://res.cloudinary.com/dxnlxrkmg/image/upload/v1742896902/Screenshot_2025-03-25_153029_lbgwzj.png" alt="View Annual Report">
+                        </a>
+                    </div>
+                    <div class="image-card">
+                        <a href="https://www.arunodaya.org/images/certificates/GST.pdf" target="_blank">
+                            <img src="https://res.cloudinary.com/dxnlxrkmg/image/upload/v1742897069/Screenshot_2025-03-25_153406_t504sk.png" alt="View Annual Report">
+                        </a>
+                    </div>
+                    <div class="image-card">
+                        <a href="https://www.arunodaya.org/images/certificates/NIETIDARPAN.pdf" target="_blank">
+                            <img src="https://res.cloudinary.com/dxnlxrkmg/image/upload/v1742897495/Screenshot_2025-03-25_154115_ondzxf.png" alt="View Annual Report">
+                        </a>
+                    </div>
+                    <div class="image-card">
+                        
+                            <img src="https://res.cloudinary.com/dxnlxrkmg/image/upload/v1742897692/Screenshot_2025-03-25_154438_vsiu7r.png" alt="View Annual Report">
+                        </a>
+                    </div>
+                    <div class="image-card">
+                        <a href="https://www.arunodaya.org/images/certificates/BODCHART.pdf" target="_blank">
+                            <img src="https://res.cloudinary.com/dxnlxrkmg/image/upload/v1742896902/Screenshot_2025-03-25_153029_lbgwzj.png" alt="View Annual Report">
+                        </a>
+                    </div>
+                    
+                </div>
+            </section>
+            <section class="covid-section">
+                <h2>Documents</h2>
+                <div class="image-grid">
+                <div class="image-card">
+                    <a href="https://www.arunodaya.org/images/documents/12%20AA%20Complete.pdf" target="_blank">
+                        <img src="https://res.cloudinary.com/dxnlxrkmg/image/upload/v1742894561/Screenshot_2025-03-25_145205_yh5unm.png" alt="View Annual Report">
+                    </a>
+                </div>
+                <div class="image-card">
+                    <a href="https://www.arunodaya.org/images/documents/80G%20Complete.pdf" target="_blank">
+                        <img src="https://res.cloudinary.com/dxnlxrkmg/image/upload/v1742894750/Screenshot_2025-03-25_145451_qulx2a.png" alt="View Annual Report">
+                    </a>
+                </div>
+                <div class="image-card">
+                    <a href="https://www.arunodaya.org/images/documents/CSR%20Certificate.PDF" target="_blank">
+                        <img src="https://res.cloudinary.com/dxnlxrkmg/image/upload/v1742894896/Screenshot_2025-03-25_145805_ghlcnr.png" alt="View Annual Report">
+                    </a>
+                </div>
+                <div class="image-card">
+                    <a href="https://www.arunodaya.org/images/documents/FCRA%20Certification.pdf" target="_blank">
+                        <img src="https://res.cloudinary.com/dxnlxrkmg/image/upload/v1742894982/Screenshot_2025-03-25_145928_ilgxd1.png" alt="View Annual Report">
+                    </a>
+                </div>
+                <div class="image-card">
+                    <a href="https://www.arunodaya.org/images/documents/GST.pdf" target="_blank">
+                        <img src="https://res.cloudinary.com/dxnlxrkmg/image/upload/v1742895123/Screenshot_2025-03-25_150137_zbi8io.png" alt="View Annual Report">
+                    </a>
+                </div>
+                <div class="image-card">
+                    <a href="https://www.arunodaya.org/images/documents/ISO%20Certification.pdf" target="_blank">
+                        <img src="https://res.cloudinary.com/dxnlxrkmg/image/upload/v1742895286/Screenshot_2025-03-25_150431_tmjja4.png" alt="View Annual Report">
+                    </a>
+                </div>
+                
+                    <div class="image-card">
+                        <a href="https://www.arunodaya.org/images/documents/LEI%20Certificate.pdf" target="_blank">
+                            <img src="https://res.cloudinary.com/dxnlxrkmg/image/upload/v1742895441/Screenshot_2025-03-25_150704_ze4yay.png" alt="View Annual Report">
+                        </a>
+                    </div>
+                    <div class="image-card">
+                        <a href="https://www.arunodaya.org/images/documents/PAN%20Card.pdf" target="_blank">
+                            <img src="https://res.cloudinary.com/dxnlxrkmg/image/upload/v1742895574/Screenshot_2025-03-25_150920_pcrr9z.png" alt="View Annual Report">
+                        </a>
+                    </div>
+                    <div class="image-card">
+                        <a href="https://www.arunodaya.org/images/documents/NITI%20AAYog.pdf" target="_blank">
+                            <img src="https://res.cloudinary.com/dxnlxrkmg/image/upload/v1742895680/Screenshot_2025-03-25_151108_eup8wo.png" alt="View Annual Report">
+                        </a>
+                    </div>
+                    <div class="image-card">
+                        <a href="https://www.arunodaya.org/images/documents/Tan%20Certificate.pdf" target="_blank">
+                            <img src="https://res.cloudinary.com/dxnlxrkmg/image/upload/v1742895764/Screenshot_2025-03-25_151234_mdujrh.png" alt="View Annual Report">
+                        </a>
+                    </div>
+                    <div class="image-card">
+                        <a href="https://www.arunodaya.org/images/documents/Trust%20Deed%20Latest.pdf" target="_blank">
+                            <img src="https://res.cloudinary.com/dxnlxrkmg/image/upload/v1742895942/Screenshot_2025-03-25_151525_e02ydw.png" alt="View Annual Report">
+                        </a>
+                    </div>
+                   
+                    
+                </div>
+            </section>
         <div class = "text-center">
         <button class="see-more-button">SEE MORE</button></div>
 
