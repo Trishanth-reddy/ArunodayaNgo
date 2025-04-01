@@ -1460,3 +1460,86 @@ body {
                 font-size: 0.9rem;
             }
         }
+/* contact Team Section */
+
+footer {
+    background: #f4f4f4; /* Background remains unchanged */
+    padding: 30px 0;
+    font-family: Arial, sans-serif;
+    color: var(--text-color); /* Updated to use theme color */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 250px;
+    text-align: center;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--primary-color); /* Updated to use theme primary color */
+}
+
+.footer-section p, .footer-section a {
+    font-size: 14px;
+    color: var(--text-color); /* Updated to use theme text color */
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: var(--accent-color); /* Added hover effect using theme accent color */
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    background: #ddd; /* Background remains unchanged */
+    color: var(--text-color); /* Updated to use theme text color */
+}
+
+.footer-logo {
+    max-width: 150px;
+    margin-bottom: 10px;
+}
+
+.qr-image {
+    max-width: 150px;
+    margin-top: 10px;
+}
+
+.left-align {
+    text-align: left;
+}
+
+/* Map container styles */
+.map-container {
+    height: 200px;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.map-link {
+    display: block;
+    margin-top: 5px;
+}
