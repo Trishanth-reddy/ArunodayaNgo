@@ -26,10 +26,11 @@
                 <a href="mailto:arunodayatrust2008@gmail.com"><i class="fa-solid fa-envelope"></i> arunodayatrust2008@gmail.com</a>
             </div>
             <div class="col-md-6 social-links text-md-end text-center">
-                <a href="www.instagram.com/arunodayatrust/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://x.com/arunodayatrust2" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://www.facebook.com/arunodaya.trust" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://www.youtube.com/@arunodayatrust8433" aria-label="LinkedIn"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.instagram.com/arunodayatrust/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/919032188999" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.facebook.com/arunodaya.trust" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a> <!-- No LinkedIn link provided -->
+        <a href="https://twitter.com/arunodayatrust2" target="_blank"><i class="fab fa-x-twitter"></i></a>
             </div>
         </div>
     </div>
@@ -49,16 +50,16 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav align-items-center">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Home</a>
+                    <a class="nav-link active" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About Us</a>
+                    <a class="nav-link" href="knowmore.html">About Us</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Our Core Team</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Media Coverage</a>
+                    <a class="nav-link" href="mediacoverage.html">Media Coverage</a>
                 </li>
                 <li class="nav-item ms-lg-2">
                     <a href="#" class="btn btn-primary-custom">GET INVOLVED</a>
@@ -137,64 +138,71 @@
             </div>
         </div>
     </div>
-
-    <!-- Contact Section -->
-    <div class="contact-container container my-4">
-        <div class="row">
-            <!-- Left Column (Contact Info & Address) -->
-            <div class="col-md-7" style="text-align:left">
-                <div style="margin-bottom:30px">
-                    <h2>Get in touch</h2>
-                    <p><i class="fas fa-envelope"></i> <a href="mailto:venkat@arunoday.org">venkat@arunoday.org</a></p>
-                    <p><i class="fas fa-envelope"></i> <a href="mailto:arunodayatrust2008@gmail.com">arunodayatrust2008@gmail.com</a></p>
-                    <p><i class="fas fa-phone"></i> <a href="tel:04027981250">040-27981250</a>, <a href="tel:27981251">27981251</a></p>
-                    <p><i class="fas fa-mobile-alt"></i> <a href="tel:+919032188999">+91 90321 88999</a>, <a href="tel:+918096950551">80969 50551</a></p>
-                </div>
-
-                <div style="margin-bottom:30px">
-                    <h3><i class="fas fa-map-marker-alt"></i> TELANGANA ADDRESS</h3>
-                    <p>1-4/7, Road No - 2, Ex Service Men Colony, Balaji Nagar, Jawahar Nagar Municipal Corporation, Kapra Mandal, Medchal District, Secunderabad - 500087.</p>
-                    <p><i class="fas fa-envelope"></i> <a href="mailto:arunodayatrust2008@gmail.com">arunodayatrust2008@gmail.com</a>, <a href="mailto:venkat@arunoday.org">venkat@arunoday.org</a></p>
-                    <p><i class="fas fa-phone"></i> 040-27981250, 27981251</p>
-                    <div id="map-telangana" class="contact-map"></div>
-                </div>
-
-                <div style="margin-bottom:30px">
-                    <h3><i class="fas fa-map-marker-alt"></i> ANDHRA PRADESH ADDRESS</h3>
-                    <p>#5-98-50/1, 3rd Floor, Hotel Viceroy Complex, Main Road Brodipet, Guntur - 522002.</p>
-                    <p><i class="fas fa-phone"></i> 0863 2236999</p>
-                    <p><i class="fas fa-mobile-alt"></i> <a href="tel:+918096950550">+91 80969 50550</a></p>
-                    <div id="map-andhra" class="contact-map"></div>
-                </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section about">
+                <img src="logo.png" alt="Organization Logo" class="footer-logo">
+                <p>The Arunoday Trust is a non-profit organization dedicated to social welfare and community development.</p>
             </div>
 
-            <!-- Right Column (QR Code) -->
-            <div class="col-md-5 d-flex flex-column align-items-center">
-                <div class="contact-qr-placeholder">QR Code Here</div>
+            <div class="footer-section contact left-align">
+                <h3>Get in Touch</h3>
+                <p><strong>Telangana Office:</strong><br>
+                    1-4/7, Road No - 2, Ex Service Men Colony, Balaji Nagar, Jawahar Nagar, Medchal District, Secunderabad - 500087.</p>
+
+                <div class="map-container" id="telangana-map"></div>
+                <a href="https://maps.google.com/?q=1-4/7, Road No - 2, Ex Service Men Colony, Balaji Nagar, Jawahar Nagar, Medchal District, Secunderabad - 500087" target="_blank" class="map-link">View on Google Maps</a>
+
+                <p><strong>Andhra Pradesh Office:</strong><br>
+                    #5-98-50/1, 3rd Floor, Hotel Viceroy Complex, Main Road Brodipet, Guntur - 522002.</p>
+
+                <div class="map-container" id="andhra-map"></div>
+                <a href="https://maps.google.com/?q=5-98-50/1, 3rd Floor, Hotel Viceroy Complex, Main Road Brodipet, Guntur - 522002" target="_blank" class="map-link">View on Google Maps</a>
+
+                <p><strong>Email:</strong> <a href="mailto:arunodaytrust2008@gmail.com">arunodaytrust2008@gmail.com</a>, <a href="mailto:venkat@arunoday.org">venkat@arunoday.org</a></p>
+                <p><strong>Phone:</strong> 040-27981250, 27981251 | 0863-2236999, <a href="tel:+918096950551">+91 80969 50551</a></p>
+            </div>
+
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our Work</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Donate</a></li>
+                    <li><a href="#">Get Involved</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section qr-code">
+                <h3>Donate</h3>
+                <img src="qr-code.png" alt="Donation QR Code" class="qr-image">
             </div>
         </div>
-    </div>
-     <!-- Leaflet.js Library -->
-     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-     <script>
-         function initMap() {
-             // Telangana Map
-             var telanganaMap = L.map('map-telangana').setView([17.385, 78.4867], 10);
-             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                 attribution: '&copy; OpenStreetMap contributors'
-             }).addTo(telanganaMap);
-             L.marker([17.385, 78.4867]).addTo(telanganaMap).bindPopup('Telangana Location');
- 
-             // Andhra Pradesh Map
-             var andhraMap = L.map('map-andhra').setView([16.3067, 80.4365], 10);
-             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                 attribution: '&copy; OpenStreetMap contributors'
-             }).addTo(andhraMap);
-             L.marker([16.3067, 80.4365]).addTo(andhraMap).bindPopup('Andhra Pradesh Location');
-         }
- 
-         document.addEventListener("DOMContentLoaded", initMap);
-     </script>
+        <div class="footer-bottom">
+            <p>© 2025 Arunoday Trust. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Add Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        // Initialize Telangana map
+        const telanganaMap = L.map('telangana-map').setView([17.5056, 78.5044], 15);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(telanganaMap);
+        L.marker([17.5056, 78.5044]).addTo(telanganaMap)
+            .bindPopup('Arunoday Trust<br>Telangana Office');
+
+        // Initialize Andhra Pradesh map
+        const andhraMap = L.map('andhra-map').setView([16.3067, 80.4365], 15);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(andhraMap);
+        L.marker([16.3067, 80.4365]).addTo(andhraMap)
+            .bindPopup('Arunoday Trust<br>Andhra Pradesh Office');
+    </script>
 
     <script src="annualreports.js"></script>
     <!-- Bootstrap JS -->

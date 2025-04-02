@@ -38,8 +38,8 @@ body {
 }
 
 .logo {
-    width: 370px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
 }
 
 /* Navigation */
@@ -416,4 +416,84 @@ margin-bottom: 10px;
 cursor: pointer;
 padding: 8px 16px;
 transition: background-color 0.3s ease;
+}
+
+footer {
+    background: #f4f4f4;
+    padding: 30px 0;
+    font-family: Arial, sans-serif;
+    color: #222;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 250px;
+    text-align: center;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.footer-section p, .footer-section a {
+    font-size: 14px;
+    color: #222;
+    text-decoration: none;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    background: #ddd;
+    color: #222;
+}
+
+.footer-logo {
+    max-width: 150px;
+    margin-bottom: 10px;
+}
+
+.qr-image {
+    max-width: 150px;
+    margin-top: 10px;
+}
+
+.left-align {
+    text-align: left;
+}
+
+/* Map container styles */
+.map-container {
+    height: 200px;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.map-link {
+    display: block;
+    margin-top: 5px;
+    color: #0000ff;
+    text-decoration: underline;
 }
