@@ -1381,7 +1381,8 @@ body {
         }
     
         .core-team-know-more-btn:hover {
-            background-color: var(--hover-color);
+
+            background-color: var(--primary-color);
             transform: translateX(-50%) scale(1.05);
         }
         
