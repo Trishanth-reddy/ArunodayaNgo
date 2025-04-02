@@ -744,8 +744,8 @@ footer {
                 </ul>
                 <p>These pillars guide the Trust's mission to promote child well-being and uphold integrity.</p>
                 <div class="d-flex">
-                    <button class="report-btn">ANNUAL REPORT</button>
-                    <button class="audit-btn">AUDIT REPORT</button>
+                    <button class="report-btn" onclick="redirectToAnnualReport()">ANNUAL REPORT</button>
+                    <button class="audit-btn" onclick="redirectToAuditReport()">AUDIT REPORT</button>
                 </div>
             </div>
             <div class="col-lg-6  mt-lg-0 order-sm-1 order-md-2" >
@@ -970,6 +970,13 @@ footer {
         }).addTo(andhraMap);
         L.marker([16.3067, 80.4365]).addTo(andhraMap)
             .bindPopup('Arunoday Trust<br>Andhra Pradesh Office');
+    function redirectToAnnualReport() {
+        window.location.href = "annualreports.html"; // Change to the actual URL
+    }
+
+    function redirectToAuditReport() {
+        window.location.href = "auditreports.html"; // Change to the actual URL
+    }
     </script>
         
         <!-- Bootstrap JS -->
